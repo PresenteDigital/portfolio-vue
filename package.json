@@ -11,6 +11,6 @@
     "vuetify": "^2.6.1"
   },
   "devDependencies": {
-    "vuetify-loader": "^1.7.3"
+    "webpack-node-externals": "^3.0.0"
   }
 }
