@@ -3,7 +3,7 @@
     <div class="main-container">
       <v-toolbar app color="transparent" class="mb-6 mt-6 xs-12">
         <v-toolbar-title class="ml-10">
-          <img src="../img/logosvg.svg" class="navbar-brand-img" />
+          <g-image src="../img/logosvg.svg" class="navbar-brand-img" />
         </v-toolbar-title>
 
         <v-spacer></v-spacer>
