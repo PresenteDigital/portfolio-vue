@@ -1,6 +1,6 @@
 <template>
   <v-app class="layout">
-    <v-navigation-drawer permanent fixed>
+    <!--     <v-navigation-drawer permanent fixed>
       <v-list-item>
         <v-list-item-avatar>
           <v-img src="https://randomuser.me/api/portraits/women/85.jpg"></v-img>
@@ -33,7 +33,7 @@
           </v-list-item-content>
         </v-list-item>
       </v-list>
-    </v-navigation-drawer>
+    </v-navigation-drawer> -->
     <v-main>
       <slot />
     </v-main>
@@ -68,6 +68,8 @@ query {
 html {
   scroll-behavior: smooth;
 }
-div.v-application--wrap {
-}
+/* div.v-application--wrap {
+  flex-direction: row;
+  margin-left: 256px;
+} */
 </style>

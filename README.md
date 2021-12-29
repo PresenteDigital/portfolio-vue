@@ -17,8 +17,5 @@ This is the project you get when you run `gridsome create new-project`.
 
 ### Colors
 
-* Dark purple: 272343
-* Blue: 34a3a3
-* Light Blue: bae8e8
-* White: e3f6f5
-* Light Pink: fafafa
+*Hero Background: #fbfafa
+
