@@ -69,7 +69,5 @@ html {
   scroll-behavior: smooth;
 }
 div.v-application--wrap {
-  flex-direction: row;
-  margin-left: 256px;
 }
 </style>
