@@ -1,5 +1,6 @@
 <template>
   <Layout>
+<<<<<<< HEAD
     <Menu />
     <About />
     <Icons />
@@ -7,16 +8,22 @@
     <!--     <Projects />
     <Education />
     <Contact /> -->
+=======
+    <Icons />
+    <MedicalAssistance />
+>>>>>>> issue-5
   </Layout>
 </template>
 
 <script>
-import Menu from "@/components/Menu.vue";
 import Icons from "@/components/Icons.vue";
+<<<<<<< HEAD
 import About from "@/components/About.vue";
 import Projects from "@/components/Projects.vue";
 import Education from "@/components/Education.vue";
 import Contact from "@/components/Contact.vue";
+=======
+>>>>>>> issue-5
 import MedicalAssistance from "@/components/MedicalAssistance.vue";
 
 export default {
@@ -24,12 +31,8 @@ export default {
     title: "Hello, world!",
   },
   components: {
-    Menu,
     Icons,
-    About,
-    Projects,
-    Education,
-    Contact,
+    MedicalAssistance,
   },
 };
 </script>

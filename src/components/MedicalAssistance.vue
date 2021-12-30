@@ -99,6 +99,10 @@ section p {
   font-weight: 400;
   font-size: 1.5rem !important;
   width: 100%;
+  <<<<<<<HEAD
+=======
+
+>>>>>>> issue-5
   margin-top: 5rem;
 }
 .subtitle {
