@@ -99,10 +99,7 @@ section p {
   font-weight: 400;
   font-size: 1.5rem !important;
   width: 100%;
-  <<<<<<<HEAD
-=======
 
->>>>>>> issue-5
   margin-top: 5rem;
 }
 .subtitle {
@@ -115,6 +112,7 @@ section p {
 .theme--light.v-icon {
   color: #ffffff;
 }
+
 .v-list.v-sheet.theme--light {
   background-color: transparent;
 }
@@ -122,6 +120,7 @@ section p {
   color: #e1e1e1 !important;
   white-space: normal;
 }
+
 .v-list-item.v-list-item--link.theme--light {
   padding: 0;
 }
