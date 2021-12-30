@@ -61,6 +61,7 @@ section h3 {
 .g-image {
   /* border-radius: 100%; */
   width: 100%;
+  height: 100vh;
 }
 
 .learn-more {

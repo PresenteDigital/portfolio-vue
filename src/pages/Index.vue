@@ -1,8 +1,8 @@
 <template>
   <Layout>
     <Menu />
-    <Icons />
     <About />
+    <Icons />
     <!--     <Projects />
     <Education />
     <Contact /> -->
