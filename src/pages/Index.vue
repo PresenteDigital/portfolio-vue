@@ -1,5 +1,6 @@
 <template>
   <Layout>
+    <Menu />
     <About />
     <Projects />
     <Education />
@@ -8,6 +9,7 @@
 </template>
 
 <script>
+import Menu from "@/components/Menu.vue";
 import About from "@/components/About.vue";
 import Projects from "@/components/Projects.vue";
 import Education from "@/components/Education.vue";
@@ -18,6 +20,7 @@ export default {
     title: "Hello, world!",
   },
   components: {
+    Menu,
     About,
     Projects,
     Education,

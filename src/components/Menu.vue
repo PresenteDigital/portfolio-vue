@@ -57,42 +57,40 @@
         </v-tab-item>
       </v-tabs-items>
     </v-content>
-    <v-main>
-      <slot />
-    </v-main>
   </v-app>
 </template>
 
 <script>
 export default {
+  el: "#app",
   data() {
     return {
+      drawer: false,
+      tab: null,
       items: [
-        { title: "About", icon: "mdi-account-box-outline" },
-        { title: "Projects", icon: "mdi-apps" },
-        { title: "Education & Experience", icon: "mdi-school-outline" },
-        { title: "Contact", icon: "mdi-message-text-outline" },
+        { link: "https://www.opensalud.es/es/", title: "Paciente" },
+        {
+          link: "https://www.opensalud.es/es/Home/servicios-profesionales",
+          title: "Profesional",
+        },
+        {
+          link: "https://www.opensalud.es/opensalud360/empresas",
+          title: "Empresas",
+        },
+        { link: "https://www.opensalud.es/es/Home/saas", title: "Saas" },
+        { link: "https://blog.opensalud.es/", title: "Blog" },
       ],
-      right: null,
     };
   },
 };
 </script>
-
-<static-query>
-query {
-  metadata {
-    siteName
-  }
-}
-</static-query>
-
 <style>
-html {
-  scroll-behavior: smooth;
+.navigation-buttons {
+  color: #3238c4 !important;
+  text-transform: capitalize;
+  font-size: 1.2rem !important;
 }
-/* div.v-application--wrap {
-  flex-direction: row;
-  margin-left: 256px;
-} */
+.navbar-brand-img {
+  width: 150px;
+}
 </style>
