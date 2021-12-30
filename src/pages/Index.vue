@@ -2,12 +2,14 @@
   <Layout>
     <Icons />
     <MedicalAssistance />
+    <MedicalInsurancePrices />
   </Layout>
 </template>
 
 <script>
 import Icons from "@/components/Icons.vue";
 import MedicalAssistance from "@/components/MedicalAssistance.vue";
+import MedicalInsurancePrices from "@/components/MedicalInsurancePrices.vue";
 
 export default {
   metaInfo: {
@@ -16,6 +18,7 @@ export default {
   components: {
     Icons,
     MedicalAssistance,
+    MedicalInsurancePrices,
   },
 };
 </script>
