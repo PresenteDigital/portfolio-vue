@@ -8,7 +8,6 @@
             I'm a software developer who works a sa consultant with Python and
             JavaScript, and sometimes Etherium blockchain
           </p>
-          <p>Github <a href="https://github.com/Vegabytes">Alex</a></p>
         </v-col>
         <v-col sm="6" class="d-flex flex-row justify-center">
           <g-image

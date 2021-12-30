@@ -2,9 +2,9 @@
   <Layout>
     <Menu />
     <About />
-    <Projects />
+    <!--     <Projects />
     <Education />
-    <Contact />
+    <Contact /> -->
   </Layout>
 </template>
 

@@ -1,62 +1,39 @@
 <template>
-  <v-app app>
-    <v-app-bar app>
-      <v-app-bar-nav-icon
-        @click="drawer = true"
-        class="d-flex d-sm-none"
-      ></v-app-bar-nav-icon>
-      <v-toolbar-title
-        ><g-image src="../img/logosvg.svg" class="navbar-brand-img"
-      /></v-toolbar-title>
-      <v-spacer></v-spacer>
+  <v-app class="layout">
+    <!--     <v-navigation-drawer permanent fixed>
+      <v-list-item>
+        <v-list-item-avatar>
+          <v-img src="https://randomuser.me/api/portraits/women/85.jpg"></v-img>
+        </v-list-item-avatar>
+        <v-list-item-content>
+          <v-list-item-title class="text-h6">
+            Alejandro Castillo
+          </v-list-item-title>
+          <v-list-item-subtitle>
+            Sowtware Developer
+          </v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
 
-      <template>
-        <v-toolbar-items class="hidden-sm-and-down">
-          <v-btn
-            v-for="item in items"
-            :key="item.icon"
-            :to="item.link"
-            text
-            class="navigation-buttons"
-            >{{ item.title }}</v-btn
-          >
-        </v-toolbar-items>
-        <v-btn
-          rounded
-          outlined
-          color="indigo"
-          class="px-10 py-5 ml-12 text-button"
-          >REGÍSTRATE</v-btn
+      <v-divider></v-divider>
+
+      <v-list dense nav>
+        <v-list-item
+          v-for="item in items"
+          :key="item.title"
+          link
+          :to="`#${item.title.toLowerCase().replace(' & ', '-')}`"
         >
-        <v-btn
-          rounded
-          color="#2A2FA6"
-          dark
-          class="px-10 py-5 ml-12 mr-12 text-button"
-          >ACCEDER</v-btn
-        >
-      </template>
-    </v-app-bar>
-    <!-- Add a navigation bar -->
-    <v-navigation-drawer v-model="drawer" absolute temporary>
-      <v-list nav dense>
-        <v-list-item-group>
-          <v-list-item v-for="(item, index) in items" :key="item.title">
-            <v-list-item-title @click="tab = index">{{
-              item.title
-            }}</v-list-item-title>
-          </v-list-item>
-        </v-list-item-group>
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
       </v-list>
-    </v-navigation-drawer>
-    <!-- Navigation bar ends -->
-    <v-content class="ma-5">
-      <v-tabs-items v-model="tab" class="d-flex flex-column align-center">
-        <v-tab-item v-for="item in items" :key="item.title">
-          You are on {{ item.title }}
-        </v-tab-item>
-      </v-tabs-items>
-    </v-content>
+    </v-navigation-drawer> -->
     <v-main>
       <slot />
     </v-main>
