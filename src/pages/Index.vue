@@ -3,6 +3,7 @@
     <Menu />
     <About />
     <Icons />
+    <MedicalAssistance />
     <!--     <Projects />
     <Education />
     <Contact /> -->
@@ -16,6 +17,7 @@ import About from "@/components/About.vue";
 import Projects from "@/components/Projects.vue";
 import Education from "@/components/Education.vue";
 import Contact from "@/components/Contact.vue";
+import MedicalAssistance from "@/components/MedicalAssistance.vue";
 
 export default {
   metaInfo: {
