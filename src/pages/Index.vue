@@ -1,6 +1,7 @@
 <template>
   <Layout>
     <Menu />
+    <Icons />
     <About />
     <!--     <Projects />
     <Education />
@@ -10,6 +11,7 @@
 
 <script>
 import Menu from "@/components/Menu.vue";
+import Icons from "@/components/Icons.vue";
 import About from "@/components/About.vue";
 import Projects from "@/components/Projects.vue";
 import Education from "@/components/Education.vue";
@@ -21,6 +23,7 @@ export default {
   },
   components: {
     Menu,
+    Icons,
     About,
     Projects,
     Education,
