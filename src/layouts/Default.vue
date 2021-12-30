@@ -56,14 +56,6 @@ export default {
 };
 </script>
 
-<static-query>
-query {
-  metadata {
-    siteName
-  }
-}
-</static-query>
-
 <style>
 html {
   scroll-behavior: smooth;

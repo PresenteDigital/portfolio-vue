@@ -1,5 +1,5 @@
 <template>
-  <v-app app>
+  <section>
     <v-app-bar app>
       <v-app-bar-nav-icon
         @click="drawer = true"
@@ -49,15 +49,7 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-    <!-- Navigation bar ends -->
-    <v-content class="ma-5">
-      <v-tabs-items v-model="tab" class="d-flex flex-column align-center">
-        <v-tab-item v-for="item in items" :key="item.title">
-          You are on {{ item.title }}
-        </v-tab-item>
-      </v-tabs-items>
-    </v-content>
-  </v-app>
+  </section>
 </template>
 
 <script>
