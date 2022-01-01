@@ -1,70 +1,64 @@
 <template>
-  <section id="medical-assistance">
-    <v-container>
-      <v-row class="row">
-        <v-col
-          offset-sm="1"
-          sm="6"
-          class="col-img d-flex flex-row justify-center"
-        >
-          <g-image
-            alt="Example image"
-            src="~/img/medical-assistance-image.PNG"
-          />
-        </v-col>
-        <v-col
-          offset-sm="1"
-          sm="4"
-          class="d-flex flex-column justify-center assistance-text"
-        >
-          <h3 class="title">Asistencia médica</h3>
-          <p class="subtitle">
-            Incluida sin coste con libre elección de médico de familia y
-            pediatra, disponible los 7 días ed la semana.
-          </p>
-          <p class="subtitle">Tipos de consulta disponibles:</p>
-
+  <section id="medical-assistance" class="open-salud-icons">
+    <v-row class="row">
+      <v-col sm="6" class="col-img d-flex flex-row justify-center">
+        <g-image alt="Example image" src="~/img/medical-assistance-image.PNG" />
+      </v-col>
+      <v-col sm="6" class="d-flex flex-column justify-center assistance-text">
+        <h3 class="title">Asistencia médica</h3>
+        <p class="subtitle">
+          Incluida sin coste con libre elección de médico de familia y pediatra,
+          disponible los 7 días ed la semana.
+        </p>
+        <p class="subtitle">Tipos de consulta disponibles:</p>
+        <v-col offset="3" sm="6">
           <v-list class="mt-8">
             <v-list-item-group>
-              <v-list-item>
+              <v-list-item
+                v-for="({ icon, text }, index) in items"
+                :key="index"
+              >
                 <v-list-item-icon>
-                  <v-icon large>mdi-video-plus-outline</v-icon>
+                  <v-icon large v-text="icon"></v-icon>
                 </v-list-item-icon>
                 <v-list-item-content>
-                  <v-list-item-title>Videoconsulta</v-list-item-title>
-                </v-list-item-content>
-              </v-list-item>
-              <v-list-item>
-                <v-list-item-icon>
-                  <v-icon large>mdi-cellphone-information</v-icon>
-                </v-list-item-icon>
-                <v-list-item-content>
-                  <v-list-item-title>Atención telefónica</v-list-item-title>
-                </v-list-item-content>
-              </v-list-item>
-              <v-list-item>
-                <v-list-item-icon>
-                  <v-icon large>mdi-file-document-multiple-outline</v-icon>
-                </v-list-item-icon>
-                <v-list-item-content>
-                  <v-list-item-title>Consulta escrita</v-list-item-title>
-                </v-list-item-content>
-              </v-list-item>
-              <v-list-item>
-                <v-list-item-icon>
-                  <v-icon large>mdi-chat-processing-outline</v-icon>
-                </v-list-item-icon>
-                <v-list-item-content>
-                  <v-list-item-title>Chat</v-list-item-title>
+                  <v-list-item-title v-text="text"></v-list-item-title>
                 </v-list-item-content>
               </v-list-item>
             </v-list-item-group>
           </v-list>
         </v-col>
-      </v-row>
-    </v-container>
+      </v-col>
+    </v-row>
   </section>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      items: [
+        {
+          icon: "mdi-video-plus-outline",
+          text: `Videoconsulta`,
+        },
+        {
+          icon: "mdi-cellphone-information",
+          text: `Atención telefónica`,
+        },
+        {
+          icon: "mdi-file-document-multiple-outline",
+          text: `Consulta escrita`,
+        },
+        {
+          icon: "mdi-file-document-multiple-outline",
+          text: `Chat`,
+        },
+      ],
+    };
+  },
+};
+</script>
 
 <style scoped>
 section {

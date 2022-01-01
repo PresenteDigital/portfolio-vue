@@ -25,7 +25,7 @@
           rounded
           :outlined="item.outlined"
           :to="item.link"
-          :color="primary"
+          color="primary"
           class="px-10 py-5 ml-12 text-button"
           >{{ item.title }}</v-btn
         >
@@ -35,7 +35,7 @@
     <v-navigation-drawer v-model="drawer" absolute temporary>
       <v-list nav dense>
         <v-list-item-group>
-          <v-list-item v-for="(item, index) in items" :key="item.title">
+          <v-list-item v-for="(item, index) in nav_buttons" :key="item.title">
             <v-list-item-title @click="tab = index">{{
               item.title
             }}</v-list-item-title>
@@ -48,7 +48,6 @@
 
 <script>
 export default {
-  el: "#app",
   data() {
     return {
       drawer: false,
@@ -102,8 +101,8 @@ export default {
   border-color: 3238c4;
 }
 .open-salud-menu .log-buttons .v-btn.v-btn--is-elevated {
-  background-color: #3238c4;
-  border-color: 3238c4;
+  background-color: #3238c4 !important;
+  border-color: #3238c4 !important;
   color: #eee;
 }
 
