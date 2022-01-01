@@ -320,11 +320,7 @@ export default {
   width: 65%;
   margin-left: 5rem;
 }
-.g-image-icons {
-  -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
-  filter: drop-shadow(12px 9px 4px rgba(0, 0, 0, 0.1));
-  /* Similar syntax to box-shadow */
-}
+
 .title {
   color: #3238c4 !important;
 }

@@ -5,6 +5,7 @@
     <Icons />
     <MedicalAssistance />
     <MedicalInsurancePrices />
+    <Footer />
   </Layout>
 </template>
 
@@ -17,6 +18,7 @@ import Education from "@/components/Education.vue";
 import Contact from "@/components/Contact.vue";
 import MedicalAssistance from "@/components/MedicalAssistance.vue";
 import MedicalInsurancePrices from "@/components/MedicalInsurancePrices.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   metaInfo: {
@@ -31,6 +33,7 @@ export default {
     Contact,
     MedicalAssistance,
     MedicalInsurancePrices,
+    Footer,
   },
 };
 </script>
