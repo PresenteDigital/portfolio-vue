@@ -1,41 +1,9 @@
 <template>
-  <v-app class="layout">
-    <!--     <v-navigation-drawer permanent fixed>
-      <v-list-item>
-        <v-list-item-avatar>
-          <v-img src="https://randomuser.me/api/portraits/women/85.jpg"></v-img>
-        </v-list-item-avatar>
-        <v-list-item-content>
-          <v-list-item-title class="text-h6">
-            Alejandro Castillo
-          </v-list-item-title>
-          <v-list-item-subtitle>
-            Sowtware Developer
-          </v-list-item-subtitle>
-        </v-list-item-content>
-      </v-list-item>
-
-      <v-divider></v-divider>
-
-      <v-list dense nav>
-        <v-list-item
-          v-for="item in items"
-          :key="item.title"
-          link
-          :to="`#${item.title.toLowerCase().replace(' & ', '-')}`"
-        >
-          <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-icon>
-
-          <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer> -->
+  <v-app>
     <v-main>
-      <slot />
+      <v-container fluid>
+        <slot />
+      </v-container>
     </v-main>
   </v-app>
 </template>
@@ -55,13 +23,3 @@ export default {
   },
 };
 </script>
-
-<style>
-html {
-  scroll-behavior: smooth;
-}
-/* div.v-application--wrap {
-  flex-direction: row;
-  margin-left: 256px;
-} */
-</style>

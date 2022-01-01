@@ -1,7 +1,7 @@
 import DefaultLayout from '~/layouts/Default.vue'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
-
+import '~/assets/styles.css'
 
 export default function (Vue, { appOptions, head }) {
   head.link.push({
@@ -11,7 +11,7 @@ export default function (Vue, { appOptions, head }) {
   
   head.link.push({
     rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900',
+    href: 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"',
   });
   
   const opts = { } //opts includes, vuetify themes, icons, etc.
