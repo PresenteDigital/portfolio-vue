@@ -3,19 +3,19 @@
    <h3>{{title}}</h3>   
     <v-container grid-list-md py-16 class="icons-main-container">
       <v-layout row wrap>
-        <v-flex xs12 sm4 v-for="({ title, subtitle }, index) in items" :key="index">
+        <v-flex xs12 sm4 v-for="({ icon, title, subtitle }, index) in items" :key="index">
           <v-card class="card-container">
             <div class="icons-container">
                <div class="container-image">
-                <g-image class="g-image-icons" src="~/img/star.svg" />
+               <g-image :src="require(`!!assets-loader!@images/${icon.text}`)"/>
               </div> 
             </div>
             <v-card-title class="mt-6 d-flex justify-center"
-              ><h2 class="title">{{title.default}}</h2></v-card-title
+              ><h2 class="title">{{title.text}}</h2></v-card-title
             >
 
             <v-card-text class="mt-6 d-flex justify-center"
-              >{{subtitle.default}}</v-card-text
+              >{{subtitle.text}}</v-card-text
             >
           </v-card>
      </v-flex>
@@ -27,49 +27,50 @@
 
 <script>
 export default {
+
     data() {
     return {
  items: [
       {
-        path: {
+        icon: {
           type: String,
-          default: 'star.svg',
+          text: 'star.svg',
         },
         title: {
           type: String,
-          default: "Los mejores"
+          text: "Los mejores"
         },
              subtitle: {
           type: String,
-          default: "Los mejores médicos online"
+          text: "Los mejores médicos online"
           },
       },
       {
-        path: {
+        icon: {
           type: String,
-          default: 'price.svg',
+          text: 'price.svg',
         },
         title: {
           type: String,
-          default: "Precio a tu medida"
+          text: "Precio a tu medida"
         },
              subtitle: {
           type: String,
-          default: "Precio a tu medida"
+          text: "Precio a tu medida"
           },
       },
       {
-        path: {
+        icon: {
           type: String,
-          default: 'lock.svg"'
+          text: 'lock.svg'
         },
         title: {
           type: String,
-          default: "Cuadro médico"
+          text: "Cuadro médico"
           },
             subtitle: {
           type: String,
-          default: "El mejor cuadro médico"
+          text: "El mejor cuadro médico"
           },
       }
       ]
@@ -89,6 +90,7 @@ export default {
 
 
 section.open-salud-icons {
+  height: 100vh;
   text-align: center;
   background-color: #e4e4e4;
     font-family: "Space Grotesk", sans-serif;

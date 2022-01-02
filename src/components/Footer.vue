@@ -1,53 +1,111 @@
 <template>
-  <div id="app">
-    <v-app id="inspire">
-      <v-footer height="auto">
-        <v-card flat tile class="flex">
-          <v-card-text class=" white--text pt-12 pb-4 background-container">
-            <v-layout>
-              <v-flex v-for="(col, i) in rows" :key="i" xs12 sm3>
-                <span class="title" v-text="col.title.toUpperCase()"></span>
-                <hr width="90%" />
-                <div
-                  v-for="(child, i) in col.children"
-                  :key="i"
-                  v-text="child"
-                  class="footer-list-items"
-                ></div>
-              </v-flex>
-            </v-layout>
-          </v-card-text>
-        </v-card>
-      </v-footer>
-    </v-app>
-  </div>
+  <section class="open-salud-footer">
+    <v-footer padless dark>
+      <v-card class="flex py-16">
+        <v-row>
+          <v-col class="border" offset-sm="1" sm="3">
+            <v-card-text
+              class=" white--text"
+              v-for="(item, index) in data_first_column"
+              :key="index"
+            >
+              {{ item }}
+            </v-card-text>
+          </v-col>
+          <v-col sm="3" class="border">
+            <v-card-text
+              class=" white--text"
+              v-for="(item, index) in data_second_column"
+              :key="index"
+            >
+              {{ item }}
+            </v-card-text>
+          </v-col>
+          <v-col offset-sm="2" md="3" xs="12" class="d-flex flex-column">
+            <g-image class="logo" src="~/img/opensalud_white.svg" />
+          </v-col>
+        </v-row>
+        <v-row class="my-8">
+          <v-col offset-md="1" sm="3" class="d-flex flex-column">
+            <g-image src="~/img/im_logo_santaria.png" />
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col offset-sm="1" sm="4">
+            <v-btn class="mx-4" icon>
+              <g-image src="~/img/ICN_Facebook.svg" />
+            </v-btn>
+            <v-btn class="mx-4" icon>
+              <g-image src="~/img/ICN_Instagram.svg" />
+            </v-btn>
+            <v-btn class="mx-4" icon>
+              <g-image src="~/img/ICN_Linkedin.svg" />
+            </v-btn>
+            <v-btn class="mx-4" icon>
+              <g-image src="~/img/ICN_Twitter.svg" />
+            </v-btn>
+            <!--          <v-btn v-for="icon in icons" :key="icon" class="mx-4" icon>
+              <v-icon size="24px">
+                {{ icon }}
+              </v-icon> 
+            </v-btn> -->
+          </v-col>
+          <v-col offset-sm="1" sm="6">
+            <v-card-text class="copyright"
+              >Copyright © 2022 Open Healthcare. Todos los derechos
+              reservados.</v-card-text
+            >
+          </v-col>
+        </v-row>
+      </v-card>
+    </v-footer>
+  </section>
 </template>
+
 <script>
 export default {
   data: () => ({
-    rows: [
-      {
-        title: "",
-        children: [
-          "CONDICIONES PARA PROFESIONALES",
-          "CONDICIONES PARA PACIENTES",
-          "TELEMEDICINA PARA EMPRESAS",
-          "CONTACTO",
-        ],
-      },
-      {
-        title: "",
-        children: ["AVISO LEGAL Y COOKIES", "PREGUNTAS FRECUENTES"],
-      },
+    data_first_column: [
+      "Condiciones para profesionales",
+      "Condiciones para pacientes",
+      "Telemedicina para empresas",
+      "Contacto",
     ],
+    data_second_column: ["Aviso legal y cookies", "Preguntas frecuentes"],
+    icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"],
   }),
 };
 </script>
+
 <style>
-.footer-list-items {
-  margin-top: 1rem;
+section.open-salud-footer {
+  font-family: "Space Grotesk", sans-serif;
 }
-.background-container {
-  background-color: #1d1d1f !important;
+
+.border.col-sm-3.col {
+  border-top: 1px solid white;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #eee;
+  display: block;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+img.g-image.logo {
+  width: 15rem;
+}
+
+.open-salud-footer
+  button.mx-4.v-btn.v-btn--icon.v-btn--round.theme--dark.v-size--default {
+  margin-left: 0 !important;
+}
+
+.copyright {
+  text-align: left;
+  text-transform: uppercase;
+  background-color: #1d1d1e;
+  color: #eee;
 }
 </style>

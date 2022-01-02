@@ -63,7 +63,7 @@ export default {
 <style scoped>
 section {
   background-color: #fbfafa;
-  position: relative;
+  /*   position: relative; */
   height: 100vh;
 }
 .row {
@@ -101,7 +101,7 @@ section p {
 }
 .g-image {
   /* border-radius: 100%; */
-  width: 100vw;
+  /* width: 100vw; */
 }
 .theme--light.v-icon {
   color: #ffffff;

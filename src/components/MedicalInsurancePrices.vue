@@ -1,34 +1,35 @@
 <template>
-  <section class="section-prices">
-    <div class="section-prices-title">
-      <div class="section-title">
-        <h2>
-          Consulta online a los mejores profesionales de medicina general y
-          pediatría
-        </h2>
-      </div>
-    </div>
+  <section class="pt-8 open-salud-prices">
+    <h3>
+      {{ title }}
+    </h3>
     <v-flex xs12 sm12>
       <p class="subtitle">
-        Sin coste adicional los mejores especialistas los 7 días de la semana.
+        {{ subtitle }}
       </p>
     </v-flex>
     <v-flex xs12 sm12>
       <p class="main-text">
-        Los mejores servicios clínicos (consultas presenciales, pruebas
-        diagósticas, tratamientos, intervenciones..) de más de 25.000
-        profesionales y centros, con un precio muy reducido.
+        {{ content }}
       </p>
     </v-flex>
     <v-container grid-list-md py-16 class="prices-main-container">
-      <v-layout row wrap>
-        <v-flex xs12 sm4>
+      <!--       <v-layout row wrap>
+        <v-flex xs12 sm4> -->
+      <v-row>
+        <v-col
+          sm="4"
+          xs="12"
+          v-for="({ title, price, subtitle, buttonText, comment1, comment2 },
+          index) in items"
+          :key="index"
+        >
           <v-card class="card-container">
             <div class="prices-container">
               <div class="container-main-text">
-                <p class="time">Mensual</p>
-                <h2 class="main-price">€ 11.95</h2>
-                <p class="modality">por familia*</p>
+                <p class="time">{{ title }}</p>
+                <h2 class="main-price">{{ price }}</h2>
+                <p class="modality">{{ subtitle }}</p>
                 <div class="prices-button">
                   <div class="d-flex justify-center">
                     <div class="btn-container d-flex justify-center">
@@ -37,16 +38,16 @@
                         outlined
                         color="#A2A2A2"
                         class="px-10 py-7 text-button"
-                        >CONTRATAR</v-btn
+                        >{{ buttonText }}</v-btn
                       >
                     </div>
                   </div>
                 </div>
                 <p class="conditions">
-                  * Familia: Cónyuge/pareja e hijos menores de edad.
+                  {{ comment1 }}
                 </p>
                 <p class="conditions">
-                  ** Compromiso de permanencia mínimo de 3 meses.
+                  {{ comment2 }}
                 </p>
               </div>
             </div>
@@ -54,193 +55,117 @@
           <div class="items-list">
             <v-list class="mt-8 list-icons-prices">
               <v-list-item-group>
-                <v-list-item>
+                <v-list-item
+                  v-for="({ icon, text }, index) in services"
+                  :key="index"
+                >
                   <v-list-item-icon>
-                    <v-icon large>mdi-video-plus-outline</v-icon>
+                    <v-icon large>{{ icon }}</v-icon>
                   </v-list-item-icon>
                   <v-list-item-content>
-                    <v-list-item-title>Videoconsulta</v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-                <v-list-item>
-                  <v-list-item-icon>
-                    <v-icon large>mdi-cellphone-information</v-icon>
-                  </v-list-item-icon>
-                  <v-list-item-content>
-                    <v-list-item-title>Atención telefónica</v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-                <v-list-item>
-                  <v-list-item-icon>
-                    <v-icon large>mdi-file-document-multiple-outline</v-icon>
-                  </v-list-item-icon>
-                  <v-list-item-content>
-                    <v-list-item-title>Consulta escrita</v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-                <v-list-item>
-                  <v-list-item-icon>
-                    <v-icon large>mdi-chat-processing-outline</v-icon>
-                  </v-list-item-icon>
-                  <v-list-item-content>
-                    <v-list-item-title>Chat</v-list-item-title>
+                    <v-list-item-title>{{ text }}</v-list-item-title>
                   </v-list-item-content>
                 </v-list-item>
               </v-list-item-group>
             </v-list>
           </div>
-        </v-flex>
-        <v-flex xs12 sm4>
-          <v-card class="card-container">
-            <div class="prices-container">
-              <div class="container-main-text">
-                <p class="time">Mensual</p>
-                <h2 class="main-price">€ 11.95</h2>
-                <p class="modality">por familia*</p>
-                <div class="prices-button">
-                  <div class="d-flex justify-center">
-                    <div class="btn-container d-flex justify-center">
-                      <v-btn
-                        rounded
-                        outlined
-                        color="#A2A2A2"
-                        class="px-10 py-7 text-button"
-                        >CONTRATAR</v-btn
-                      >
-                    </div>
-                  </div>
-                </div>
-                <p class="conditions">
-                  * Familia: Cónyuge/pareja e hijos menores de edad.
-                </p>
-                <p class="conditions">
-                  ** Compromiso de permanencia mínimo de 3 meses.
-                </p>
-              </div>
-            </div>
-          </v-card>
-          <div class="items-list">
-            <v-list class="mt-8 list-icons-prices">
-              <v-list-item-group>
-                <v-list-item>
-                  <v-list-item-icon>
-                    <v-icon large>mdi-video-plus-outline</v-icon>
-                  </v-list-item-icon>
-                  <v-list-item-content>
-                    <v-list-item-title>Videoconsulta</v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-                <v-list-item>
-                  <v-list-item-icon>
-                    <v-icon large>mdi-cellphone-information</v-icon>
-                  </v-list-item-icon>
-                  <v-list-item-content>
-                    <v-list-item-title>Atención telefónica</v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-                <v-list-item>
-                  <v-list-item-icon>
-                    <v-icon large>mdi-file-document-multiple-outline</v-icon>
-                  </v-list-item-icon>
-                  <v-list-item-content>
-                    <v-list-item-title>Consulta escrita</v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-                <v-list-item>
-                  <v-list-item-icon>
-                    <v-icon large>mdi-chat-processing-outline</v-icon>
-                  </v-list-item-icon>
-                  <v-list-item-content>
-                    <v-list-item-title>Chat</v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-              </v-list-item-group>
-            </v-list>
-          </div>
-        </v-flex>
-        <v-flex xs12 sm4>
-          <v-card class="card-container">
-            <div class="prices-container">
-              <div class="container-main-text">
-                <p class="time">Mensual</p>
-                <h2 class="main-price">€ 11.95</h2>
-                <p class="modality">por familia*</p>
-                <div class="prices-button">
-                  <div class="d-flex justify-center">
-                    <div class="btn-container d-flex justify-center">
-                      <v-btn
-                        rounded
-                        outlined
-                        color="#A2A2A2"
-                        class="px-10 py-7 text-button"
-                        >CONTRATAR</v-btn
-                      >
-                    </div>
-                  </div>
-                </div>
-                <p class="conditions">
-                  * Familia: Cónyuge/pareja e hijos menores de edad.
-                </p>
-                <p class="conditions">
-                  ** Compromiso de permanencia mínimo de 3 meses.
-                </p>
-              </div>
-            </div>
-          </v-card>
-          <div class="items-list">
-            <v-list class="mt-8 list-icons-prices">
-              <v-list-item-group>
-                <v-list-item>
-                  <v-list-item-icon>
-                    <v-icon large>mdi-video-plus-outline</v-icon>
-                  </v-list-item-icon>
-                  <v-list-item-content>
-                    <v-list-item-title>Videoconsulta</v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-                <v-list-item>
-                  <v-list-item-icon>
-                    <v-icon large>mdi-cellphone-information</v-icon>
-                  </v-list-item-icon>
-                  <v-list-item-content>
-                    <v-list-item-title>Atención telefónica</v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-                <v-list-item>
-                  <v-list-item-icon>
-                    <v-icon large>mdi-file-document-multiple-outline</v-icon>
-                  </v-list-item-icon>
-                  <v-list-item-content>
-                    <v-list-item-title>Consulta escrita</v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-                <v-list-item>
-                  <v-list-item-icon>
-                    <v-icon large>mdi-chat-processing-outline</v-icon>
-                  </v-list-item-icon>
-                  <v-list-item-content>
-                    <v-list-item-title>Chat</v-list-item-title>
-                  </v-list-item-content>
-                </v-list-item>
-              </v-list-item-group>
-            </v-list>
-          </div>
-        </v-flex>
-      </v-layout>
+        </v-col>
+      </v-row>
     </v-container>
   </section>
 </template>
 <script>
 export default {
   data() {
-    return {};
+    return {
+      items: [
+        {
+          title: "Mensual",
+          price: "€ 11,95",
+          subtitle: `por familia`,
+          buttonText: "Contratar",
+          comment1: "Familia: Cónyuge/pareja e hijos menores de edad.",
+          comment2: "Compromiso de permanencia  mínimo de 3 meses.",
+        },
+        {
+          title: "Mensual",
+          price: "€ 11,95",
+          subtitle: `por familia`,
+          buttonText: "Contratar",
+          comment1: "Familia: Cónyuge/pareja e hijos menores de edad.",
+          comment2: "Compromiso de permanencia  mínimo de 3 meses.",
+        },
+        {
+          title: "Mensual",
+          price: "€ 11,95",
+          subtitle: `por familia`,
+          buttonText: "Contratar",
+          comment1: "Familia: Cónyuge/pareja e hijos menores de edad.",
+          comment2: "Compromiso de permanencia  mínimo de 3 meses.",
+        },
+      ],
+      services: [
+        {
+          icon: "mdi-video-plus-outline",
+          text: "Videoconsulta",
+        },
+        {
+          icon: "mdi-cellphone-information",
+          text: "Atención telefónica",
+        },
+        {
+          icon: "mdi-file-document-multiple-outline",
+          text: "Consulta escrita",
+        },
+        {
+          icon: "mdi-chat-processing-outline",
+          text: "Chat",
+        },
+      ],
+    };
+  },
+  props: {
+    title: {
+      type: String,
+      default:
+        "Consulta online a los mejores profesionales de medicina general y pediatría",
+    },
+    subtitle: {
+      type: String,
+      default:
+        "Sin coste adicional los mejores especialistas los 7 días de la semana.",
+    },
+    content: {
+      type: String,
+      default: `Los mejores servicios clínicos (consultas presenciales, pruebas
+        diagósticas, tratamientos, intervenciones..) de más de 25.000
+        profesionales y centros, con un precio muy reducido.`,
+    },
   },
 };
 </script>
-<style scooper>
-.section-prices {
-  background-color: #e4e4e4;
-  margin-top: 7rem;
+<style scope>
+section.open-salud-prices {
+  min-height: 100vh;
+  background-color: #fbfafa;
+  font-family: "Space Grotesk", sans-serif;
+  text-align: center;
+}
+
+.open-salud-prices h3 {
+  line-height: 1.2;
+  font-size: 3.5rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400;
+  color: rgb(29, 29, 30);
+  letter-spacing: 0.2px;
+}
+
+.open-salud-prices p-subtitle {
+  color: #2f35c3;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-top: 1rem;
 }
 .section-title {
   padding-top: 3rem;
@@ -319,9 +244,5 @@ export default {
   background-color: #e4e4e4 !important;
   width: 65%;
   margin-left: 5rem;
-}
-
-.title {
-  color: #3238c4 !important;
 }
 </style>
