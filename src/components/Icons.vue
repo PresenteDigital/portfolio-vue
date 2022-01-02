@@ -85,7 +85,7 @@ export default {
 };
 </script>
 </script>
-<style scoope>
+<style scope>
 
 
 
