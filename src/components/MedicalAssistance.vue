@@ -2,17 +2,21 @@
   <section id="medical-assistance" class="open-salud-icons">
     <v-row class="row">
       <v-col sm="6" class="col-img d-flex flex-row justify-center">
-        <g-image alt="Example image" src="~/img/medical-assistance-image.PNG" />
+        <g-image
+          alt="Example image"
+          class="image_example"
+          src="~/img/medical-assistance-image.PNG"
+        />
       </v-col>
       <v-col sm="6" class="d-flex flex-column justify-center assistance-text">
         <h3 class="title">Asistencia médica</h3>
-        <p class="subtitle px-2">
+        <p class="subtitle">
           Incluida sin coste con libre elección de médico de familia y pediatra,
-          disponible los 7 días ed la semana.
+          disponible los 7 días de la semana.
         </p>
         <p class="subtitle">Tipos de consulta disponibles:</p>
         <v-col offset="1" sm="6" class="icons-description">
-          <v-list class="mt-8">
+          <v-list class="mt-8 icons-listed">
             <v-list-item-group>
               <v-list-item
                 v-for="({ icon, text }, index) in items"
@@ -51,7 +55,7 @@ export default {
           text: `Consulta escrita`,
         },
         {
-          icon: "mdi-file-document-multiple-outline",
+          icon: "mdi-comment-processing-outline",
           text: `Chat`,
         },
       ],
@@ -105,8 +109,10 @@ section p {
   margin-left: 5%;
 }
 .g-image {
-  /* border-radius: 100%; */
-  /* width: 100vw; */
+  width: 100vw;
+}
+.col-img {
+  height: 81vh;
 }
 .theme--light.v-icon {
   color: #ffffff;
@@ -118,6 +124,7 @@ section p {
 .v-list-item__title {
   color: #e1e1e1 !important;
   white-space: normal;
+  text-align: initial;
 }
 
 .v-list-item.v-list-item--link.theme--light {
@@ -146,6 +153,9 @@ section p {
   .v-application .title {
     font-size: 2rem !important;
     line-height: 1rem;
+  }
+  .icons-listed {
+    margin-top: 0px !important;
   }
 }
 </style>

@@ -257,6 +257,7 @@ section.open-salud-prices {
   background-color: #e4e4e4 !important;
   width: 65%;
   margin-left: 5rem;
+  text-align: initial;
 }
 
 @media (max-width: 600px) {
@@ -277,6 +278,12 @@ section.open-salud-prices {
   .main-text {
     width: 100% !important;
     padding: 0.2rem;
+  }
+  .list-icons-prices {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
   }
 }
 </style>

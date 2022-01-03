@@ -71,7 +71,7 @@ export default {
 section.open-salud-about {
   background-color: #fbfafa;
   position: relative;
-  height: 100vh;
+  height: 85vh;
 }
 
 .open-salud-about h1 {
@@ -123,6 +123,7 @@ section.open-salud-about {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
   text-align: right;
+  margin-top: 18rem !important;
 }
 
 .open-salud-about .floating-text div {
@@ -131,6 +132,9 @@ section.open-salud-about {
   display: inline-flex;
 }
 @media (max-width: 600px) {
+  .open-salud-about .floating-text {
+    margin-top: 34px !important;
+  }
   .row {
     background-color: #e4e4e4;
   }

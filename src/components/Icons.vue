@@ -10,11 +10,11 @@
                <g-image :src="require(`!!assets-loader!@images/${icon.text}`)"/>
               </div> 
             </div>
-            <v-card-title class="mt-6 d-flex justify-center"
+            <v-card-title class="mt-2 d-flex justify-center"
               ><h2 class="title">{{title.text}}</h2></v-card-title
             >
 
-            <v-card-text class="mt-6 d-flex justify-center"
+            <v-card-text class="mt-2 d-flex justify-center subtitle-text"
               >{{subtitle.text}}</v-card-text
             >
           </v-card>
@@ -86,11 +86,6 @@ export default {
 </script>
 </script>
 <style scope>
-@media (max-width: 600px) {
-  .section-icons {
-    margin-top: 32rem;
-  }
-}
 
 
 section.open-salud-icons {
@@ -142,4 +137,13 @@ font-family: "Space Grotesk", sans-serif !important;
   -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
   filter: drop-shadow(12px 9px 4px rgba(0, 0, 0, 0.1));
 }
+.subtitle-text{
+  margin-top: 1px !important;
+  }
+@media (max-width: 600px) {
+  .section-icons {
+    margin-top: 32rem;
+  }
+}
+
 </style>
