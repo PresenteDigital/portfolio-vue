@@ -86,11 +86,15 @@ export default {
 </script>
 </script>
 <style scope>
-
+@media (max-width: 600px) {
+  .section-icons {
+    margin-top: 32rem;
+  }
+}
 
 
 section.open-salud-icons {
-  height: 100vh;
+  /* height: 100vh; */
   text-align: center;
   background-color: #e4e4e4;
     font-family: "Space Grotesk", sans-serif;

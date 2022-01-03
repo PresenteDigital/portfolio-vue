@@ -26,7 +26,7 @@
             <div>Saber más</div>
           </div>
         </v-col>
-        <v-col offset="1" sm="6">
+        <v-col offset="1" sm="6" class="container-img">
           <g-image
             alt="Example image"
             src="~/img/social-benefits.jpg"
@@ -76,7 +76,7 @@ section.open-salud-about {
 
 .open-salud-about h1 {
   line-height: 1.2;
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-family: "Space Grotesk", sans-serif;
   font-weight: 400;
   color: rgb(29, 29, 30);
@@ -129,5 +129,13 @@ section.open-salud-about {
   transform: rotate(-90deg);
   /* position: relative; */
   display: inline-flex;
+}
+@media (max-width: 600px) {
+  .row {
+    background-color: #e4e4e4;
+  }
+  .container-img {
+    margin-left: 0;
+  }
 }
 </style>

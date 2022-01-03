@@ -6,12 +6,12 @@
       </v-col>
       <v-col sm="6" class="d-flex flex-column justify-center assistance-text">
         <h3 class="title">Asistencia médica</h3>
-        <p class="subtitle">
+        <p class="subtitle px-2">
           Incluida sin coste con libre elección de médico de familia y pediatra,
           disponible los 7 días ed la semana.
         </p>
         <p class="subtitle">Tipos de consulta disponibles:</p>
-        <v-col offset="3" sm="6">
+        <v-col offset="1" sm="6" class="icons-description">
           <v-list class="mt-8">
             <v-list-item-group>
               <v-list-item
@@ -64,7 +64,7 @@ export default {
 section {
   background-color: #fbfafa;
   /*   position: relative; */
-  height: 100vh;
+  /* height: 100vh; */
 }
 .row {
   background-color: #1d1d1f;
@@ -85,7 +85,9 @@ section h3 {
   color: #e1e1e1 !important;
   font-weight: 400;
   font-size: 5rem !important;
-  width: 100%;
+  width: 35%;
+  text-align: initial;
+  margin-left: 5%;
 }
 section p {
   color: #828282 !important;
@@ -98,6 +100,9 @@ section p {
 }
 .subtitle {
   margin-top: 2rem;
+  width: 65%;
+  text-align: initial;
+  margin-left: 5%;
 }
 .g-image {
   /* border-radius: 100%; */
@@ -117,5 +122,30 @@ section p {
 
 .v-list-item.v-list-item--link.theme--light {
   padding: 0;
+}
+@media (max-width: 600px) {
+  section h3 {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 1rem !important;
+    margin-top: 1rem !important;
+  }
+  .subtitle {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 1rem !important;
+  }
+  .section-icons {
+    margin-top: 35rem;
+  }
+  .icons-description {
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .v-application .title {
+    font-size: 2rem !important;
+    line-height: 1rem;
+  }
 }
 </style>

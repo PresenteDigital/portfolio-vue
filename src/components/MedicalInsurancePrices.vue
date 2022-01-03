@@ -1,5 +1,5 @@
 <template>
-  <section class="pt-8 open-salud-prices">
+  <section class="pt-8 px-2 open-salud-prices">
     <h3>
       {{ title }}
     </h3>
@@ -127,8 +127,7 @@ export default {
   props: {
     title: {
       type: String,
-      default:
-        "Consulta online a los mejores profesionales de medicina general y pediatría",
+      default: "Consultas online incluidas",
     },
     subtitle: {
       type: String,
@@ -145,6 +144,9 @@ export default {
 };
 </script>
 <style scope>
+section {
+  background-color: #e4e4e4 !important;
+}
 section.open-salud-prices {
   min-height: 100vh;
   background-color: #fbfafa;
@@ -159,6 +161,11 @@ section.open-salud-prices {
   font-weight: 400;
   color: rgb(29, 29, 30);
   letter-spacing: 0.2px;
+  width: 35%;
+  margin: auto;
+  text-align: initial;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .open-salud-prices p-subtitle {
@@ -182,13 +189,19 @@ section.open-salud-prices {
   text-align: center;
   font-size: 2rem;
   font-weight: 500;
-  margin-top: 1rem;
+  margin-top: 2rem;
+  width: 35%;
+  margin: auto;
+  text-align: initial;
 }
 .main-text {
   text-align: center;
   font-size: 1.5rem;
   font-weight: 400;
-  margin-top: 1rem;
+  margin-top: 2rem;
+  width: 35%;
+  margin: auto;
+  text-align: initial;
 }
 
 .prices-main-container {
@@ -244,5 +257,23 @@ section.open-salud-prices {
   background-color: #e4e4e4 !important;
   width: 65%;
   margin-left: 5rem;
+}
+
+@media (max-width: 600px) {
+  .open-salud-prices h3 {
+    font-size: 2.5rem;
+  }
+  .open-salud-prices {
+    margin-top: 1rem;
+  }
+  .open-salud-prices h3 {
+    width: 100%;
+  }
+  .subtitle {
+    width: 100%;
+  }
+  .main-text {
+    width: 100% !important;
+  }
 }
 </style>
