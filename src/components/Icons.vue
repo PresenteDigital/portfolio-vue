@@ -144,6 +144,10 @@ font-family: "Space Grotesk", sans-serif !important;
   .section-icons {
     margin-top: 32rem;
   }
+
+  .open-salud-icons h3 {
+    margin-top: 7rem;
+}
 }
 
 </style>
