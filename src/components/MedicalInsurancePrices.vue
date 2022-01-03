@@ -268,12 +268,15 @@ section.open-salud-prices {
   }
   .open-salud-prices h3 {
     width: 100%;
+    padding: 0.2rem;
   }
   .subtitle {
     width: 100%;
+    padding: 0.2rem;
   }
   .main-text {
     width: 100% !important;
+    padding: 0.2rem;
   }
 }
 </style>
