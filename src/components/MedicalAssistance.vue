@@ -1,5 +1,5 @@
 <template>
-  <section id="medical-assistance" class="open-salud-icons">
+  <section id="medical-assistance" class="open-salud-medical-assistance">
     <v-row class="row">
       <v-col sm="6" class="col-img d-flex flex-row justify-center">
         <g-image
@@ -7,14 +7,13 @@
           src="~/assets/images/medical-assistance-image.PNG"
         />
       </v-col>
-      <v-col sm="6" class="d-flex flex-column justify-center assistance-text">
-        <h3 class="title">Asistencia médica</h3>
-        <p class="subtitle">
-          Incluida sin coste con libre elección de médico de familia y pediatra,
-          disponible los 7 días de la semana.
+      <v-col sm="6" class="px-16 py-8">
+        <h3 class="title">{{ title }}</h3>
+        <p class="mt-8">
+          {{ subtitle }}
         </p>
-        <p class="subtitle">Tipos de consulta disponibles:</p>
-        <v-col offset="1" sm="6" class="icons-description">
+        <p class="mt-8">{{ subtitle2 }}</p>
+        <v-col sm="6" class="icons-description">
           <v-list class="mt-8 icons-listed">
             <v-list-item-group>
               <v-list-item
@@ -60,12 +59,28 @@ export default {
       ],
     };
   },
+  props: {
+    title: {
+      type: String,
+      default: "Asistencia médica",
+    },
+    subtitle: {
+      type: String,
+      default:
+        "Incluida sin coste con libre elección de médico de familia y pediatra,disponible los 7 días de la semana.",
+    },
+    subtitle2: {
+      type: String,
+      default: "Tipos de consulta disponibles:",
+    },
+  },
 };
 </script>
 
 <style scoped>
 section {
   background-color: #fbfafa;
+  font-family: "Space Grotesk", sans-serif !important;
   /*   position: relative; */
   /* height: 100vh; */
 }
@@ -77,12 +92,9 @@ section {
   padding: 1px;
   margin-left: 0;
 }
-.assistance-text {
-  margin-left: 0;
-}
 .v-application .title {
-  font-size: 4.5rem !important;
-  line-height: 6rem;
+  font-size: 4rem !important;
+  line-height: 5rem;
 }
 section h3 {
   color: #e1e1e1 !important;
@@ -90,29 +102,21 @@ section h3 {
   font-size: 5rem !important;
   width: 35%;
   text-align: initial;
-  margin-left: 5%;
 }
 section p {
   color: #828282 !important;
   line-height: 1.2;
   font-weight: 400;
   font-size: 1.5rem !important;
-  width: 100%;
+}
 
-  margin-top: 5rem;
+.open-salud-medical-assistance p {
 }
-.subtitle {
-  margin-top: 2rem;
-  width: 65%;
-  text-align: initial;
-  margin-left: 5%;
-}
+
 .g-image {
   width: 100vw;
 }
-.col-img {
-  height: 81vh;
-}
+
 .theme--light.v-icon {
   color: #ffffff;
 }

@@ -1,9 +1,9 @@
 <template>
-  <section class="section-icons open-salud-icons pt-8">
-   <h3>{{title}}</h3>   
-    <v-container grid-list-md py-16 class="icons-main-container">
-      <v-layout row wrap>
-        <v-flex xs12 sm4 v-for="({ icon, title, subtitle, alt }, index) in items" :key="index">
+  <section class="open-salud-icons pt-8"> 
+    <v-container grid-list-md py-16>
+         <h3>{{title}}</h3>  
+      <v-layout row wrap justify-space-between class="mt-16">
+        <v-flex sm12 md4 v-for="({ icon, title, subtitle }, index) in items" :key="index">
           <v-card class="card-container">
             <div class="icons-container">
                <div class="container-image">
@@ -90,15 +90,16 @@ export default {
 
 section.open-salud-icons {
   /* height: 100vh; */
-  text-align: center;
   background-color: #e4e4e4;
     font-family: "Space Grotesk", sans-serif;
 }
 .open-salud-icons h2.title {
+  text-align: left;
 color: #3238c4 !important;
 font-family: "Space Grotesk", sans-serif !important;
 }
 .open-salud-icons h3 {
+      text-align: center;
   line-height: 1.2;
   font-size: 2rem;
   font-weight: 400;

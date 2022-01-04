@@ -4,6 +4,13 @@ import 'vuetify/dist/vuetify.min.css'
 import '~/assets/styles.css'
 
 export default function (Vue, { appOptions, head }) {
+
+  // Add a meta tag description
+  head.meta.push({
+      name: 'description',
+      content: 'Opensaludpass cuida de ti siempre'
+    })
+  
   head.link.push({
     rel: 'stylesheet',
     href: 'https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css',

@@ -1,9 +1,9 @@
 <template>
   <section class="open-salud-about pt-8">
     <v-container>
-      <v-row>
-        <v-col sm="5">
-          <h5 class=" mb-8">{{ subtitle }}</h5>
+      <v-row no-gutters>
+        <v-col cols="12" offset-sm="1" sm="5">
+          <h5 class="mb-8">{{ subtitle }}</h5>
           <h1>{{ title }}</h1>
           <v-list class="mt-8">
             <v-list-item-group>
@@ -26,7 +26,7 @@
             <div>{{ label_text }}</div>
           </div>
         </v-col>
-        <v-col offset="1" sm="6" class="container-img">
+        <v-col offset-sm="1" sm="5" cols="12" class="container-img">
           <g-image
             alt="Beneficios sociales"
             src="~/assets/images/social-benefits.jpg"
@@ -84,7 +84,7 @@ section.open-salud-about {
 
 .open-salud-about h1 {
   line-height: 1.2;
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-family: "Space Grotesk", sans-serif;
   font-weight: 400;
   color: rgb(29, 29, 30);
@@ -107,7 +107,7 @@ section.open-salud-about {
 }
 
 .open-salud-about .g-image {
-  height: 80vh;
+  height: 100%;
   width: 100%;
 }
 
@@ -129,7 +129,6 @@ section.open-salud-about {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
   text-align: right;
-  margin-top: 18rem !important;
 }
 
 .open-salud-about .floating-text div {
@@ -142,9 +141,6 @@ section.open-salud-about {
   }
   .row {
     background-color: #e4e4e4;
-  }
-  .container-img {
-    margin-left: 0;
   }
 }
 </style>
