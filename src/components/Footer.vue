@@ -22,12 +22,19 @@
             </v-card-text>
           </v-col>
           <v-col offset-sm="2" md="3" xs="12" class="d-flex flex-column">
-            <g-image class="logo" src="~/assets/images/opensalud_white.svg" />
+            <g-image
+              class="logo"
+              src="~/assets/images/opensalud_white.svg"
+              alt="Open salud"
+            />
           </v-col>
         </v-row>
         <v-row class="my-8">
           <v-col offset-md="1" sm="3" class="d-flex flex-column">
-            <g-image src="~/assets/images/im_logo_santaria.png" />
+            <g-image
+              src="~/assets/images/im_logo_santaria.png"
+              alt="Web sanitaria"
+            />
           </v-col>
         </v-row>
         <v-row>
