@@ -22,27 +22,26 @@
             </v-card-text>
           </v-col>
           <v-col offset-sm="2" md="3" xs="12" class="d-flex flex-column">
-            <g-image class="logo" src="~/img/opensalud_white.svg" />
+            <g-image class="logo" src="~/assets/images/opensalud_white.svg" />
           </v-col>
         </v-row>
         <v-row class="my-8">
           <v-col offset-md="1" sm="3" class="d-flex flex-column">
-            <g-image src="~/img/im_logo_santaria.png" />
+            <g-image src="~/assets/images/im_logo_santaria.png" />
           </v-col>
         </v-row>
         <v-row>
           <v-col offset-sm="1" sm="4">
-            <v-btn class="mx-4" icon>
-              <g-image src="~/img/ICN_Facebook.svg" />
-            </v-btn>
-            <v-btn class="mx-4" icon>
-              <g-image src="~/img/ICN_Instagram.svg" />
-            </v-btn>
-            <v-btn class="mx-4" icon>
-              <g-image src="~/img/ICN_Linkedin.svg" />
-            </v-btn>
-            <v-btn class="mx-4" icon>
-              <g-image src="~/img/ICN_Twitter.svg" />
+            <v-btn
+              class="mx-4"
+              icon
+              v-for="({ icon, alt }, index) in icons"
+              :key="index"
+            >
+              <g-image
+                :src="require(`!!assets-loader!@images/${icon}`)"
+                :alt="alt"
+              />
             </v-btn>
             <!--          <v-btn v-for="icon in icons" :key="icon" class="mx-4" icon>
               <v-icon size="24px">
@@ -72,7 +71,12 @@ export default {
       "Contacto",
     ],
     data_second_column: ["Aviso legal y cookies", "Preguntas frecuentes"],
-    icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"],
+    icons: [
+      { icon: "ICN_Facebook.svg", alt: "Icono Facebook" },
+      { icon: "ICN_Twitter.svg", alt: "Icono Twitter" },
+      { icon: "ICN_Linkedin.svg", alt: "Icono Linkedin" },
+      { icon: "ICN_Instagram.svg", alt: "Icono Instagram" },
+    ],
   }),
 };
 </script>

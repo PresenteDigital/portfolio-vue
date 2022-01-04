@@ -3,9 +3,8 @@
     <v-row class="row">
       <v-col sm="6" class="col-img d-flex flex-row justify-center">
         <g-image
-          alt="Example image"
-          class="image_example"
-          src="~/img/medical-assistance-image.PNG"
+          alt="Asistencia médica"
+          src="~/assets/images/medical-assistance-image.PNG"
         />
       </v-col>
       <v-col sm="6" class="d-flex flex-column justify-center assistance-text">

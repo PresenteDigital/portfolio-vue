@@ -5,7 +5,7 @@
         @click="drawer = true"
         class="d-flex d-sm-none"
       ></v-app-bar-nav-icon>
-      <g-image src="~/img/logo.svg" width="150px" alt="Open salud" />
+      <g-image src="~/assets/images/logo.svg" width="150px" alt="Open salud" />
 
       <v-toolbar-items class="hidden-sm-and-down nav-buttons">
         <v-btn

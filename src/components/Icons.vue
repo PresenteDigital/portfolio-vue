@@ -3,11 +3,11 @@
    <h3>{{title}}</h3>   
     <v-container grid-list-md py-16 class="icons-main-container">
       <v-layout row wrap>
-        <v-flex xs12 sm4 v-for="({ icon, title, subtitle }, index) in items" :key="index">
+        <v-flex xs12 sm4 v-for="({ icon, title, subtitle, alt }, index) in items" :key="index">
           <v-card class="card-container">
             <div class="icons-container">
                <div class="container-image">
-               <g-image :src="require(`!!assets-loader!@images/${icon.text}`)"/>
+               <g-image :src="require(`!!assets-loader!@images/${icon.text}`)" :alt="title.text"/>
               </div> 
             </div>
             <v-card-title class="mt-2 d-flex justify-center"

@@ -19,17 +19,17 @@
           </v-list>
           <v-row class="mt-4">
             <v-btn class="ma-2" outlined rounded>
-              Contratar ahora
+              {{ button_text }}
             </v-btn>
           </v-row>
           <div class="floating-text mt-8">
-            <div>Saber más</div>
+            <div>{{ label_text }}</div>
           </div>
         </v-col>
         <v-col offset="1" sm="6" class="container-img">
           <g-image
-            alt="Example image"
-            src="~/img/social-benefits.jpg"
+            alt="Beneficios sociales"
+            src="~/assets/images/social-benefits.jpg"
             fit="fill"
           />
         </v-col>
@@ -62,6 +62,14 @@ export default {
     subtitle: {
       type: String,
       default: "Telemedicina",
+    },
+    button_text: {
+      type: String,
+      default: "Contratar ahora",
+    },
+    label_text: {
+      type: String,
+      default: "Sabel más",
     },
   },
 };
@@ -113,8 +121,6 @@ section.open-salud-about {
 }
 
 .open-salud-about .floating-text {
-  /*   position: absolute;
-  bottom: 0; */
   color: #3238c4;
   border-right: 1px solid #3238c4;
   padding: 0 0 2rem 0.5rem;
@@ -128,7 +134,6 @@ section.open-salud-about {
 
 .open-salud-about .floating-text div {
   transform: rotate(-90deg);
-  /* position: relative; */
   display: inline-flex;
 }
 @media (max-width: 600px) {
