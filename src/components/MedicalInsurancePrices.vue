@@ -36,7 +36,7 @@
                       <v-btn
                         rounded
                         outlined
-                        color="#A2A2A2"
+                        color="#888888"
                         class="px-10 py-7 text-button"
                         >{{ buttonText }}</v-btn
                       >
@@ -263,10 +263,9 @@ section.open-salud-prices {
 @media (max-width: 600px) {
   .open-salud-prices h3 {
     font-size: 2.5rem;
+    margin-top: 0;
   }
-  .open-salud-prices {
-    margin-top: 1rem;
-  }
+
   .open-salud-prices h3 {
     width: 100%;
     padding: 0.2rem;

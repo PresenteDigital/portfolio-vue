@@ -1,7 +1,11 @@
 <template>
   <section class="open-salud-footer">
-    <v-footer padless dark>
-      <v-card class="flex py-16">
+    <v-footer padless dark class="footer-dark">
+      <div class="borders">
+        <div class="border-line"></div>
+        <div class="border-line-second"></div>
+      </div>
+      <v-card class="flex py-2">
         <v-row>
           <v-col class="border" offset-sm="1" sm="3">
             <v-card-text
@@ -21,7 +25,12 @@
               {{ item }}
             </v-card-text>
           </v-col>
-          <v-col offset-sm="2" md="3" xs="12" class="d-flex flex-column">
+          <v-col
+            offset-sm="2"
+            md="3"
+            xs="12"
+            class="d-flex flex-column column-logo"
+          >
             <g-image
               class="logo"
               src="~/assets/images/opensalud_white.svg"
@@ -29,14 +38,24 @@
             />
           </v-col>
         </v-row>
-        <v-row class="my-8">
+        <!-- <v-row class="my-8">
           <v-col offset-md="1" sm="3" class="d-flex flex-column">
             <g-image
               src="~/assets/images/im_logo_santaria.png"
               alt="Web sanitaria"
             />
           </v-col>
-        </v-row>
+        </v-row> -->
+        <div class="container-imgs">
+          <g-image
+            src="~/assets/images/im_logo_santaria.png"
+            alt="Web sanitaria"
+          />
+          <g-image src="~/assets/images/rgpd.png" alt="RGPD" />
+          <g-image src="~/assets/images/applus-iso.png" alt="applus" />
+          <g-image src="~/assets/images/iso.png" alt="iso" />
+          <g-image src="~/assets/images/logo-receta.png" alt="logo-receta" />
+        </div>
         <v-row>
           <v-col offset-sm="1" sm="4">
             <v-btn
@@ -50,11 +69,6 @@
                 :alt="alt"
               />
             </v-btn>
-            <!--          <v-btn v-for="icon in icons" :key="icon" class="mx-4" icon>
-              <v-icon size="24px">
-                {{ icon }}
-              </v-icon> 
-            </v-btn> -->
           </v-col>
           <v-col offset-sm="1" sm="6">
             <v-card-text class="copyright"
@@ -89,12 +103,33 @@ export default {
 </script>
 
 <style>
+.footer-dark {
+  display: block;
+  background-color: #1e1e1e !important;
+}
+.borders {
+  padding-top: 2rem;
+  display: flex;
+}
+
+.border-line {
+  height: 1px;
+  width: 16rem;
+  background-color: white;
+  margin-left: 9rem;
+}
+.border-line-second {
+  height: 1px;
+  width: 16rem;
+  background-color: white;
+  margin-left: 9rem;
+}
+
 section.open-salud-footer {
   font-family: "Space Grotesk", sans-serif;
 }
 
 .border.col-sm-3.col {
-  border-top: 1px solid white;
   padding-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -118,5 +153,35 @@ img.g-image.logo {
   text-transform: uppercase;
   background-color: #1d1d1e;
   color: #eee;
+}
+.container-imgs {
+  display: flex;
+  justify-content: center;
+}
+.container-imgs img {
+  align-self: center;
+  margin-right: 1rem;
+}
+.border {
+  margin-left: 1rem;
+}
+
+@media (max-width: 600px) {
+  .container-imgs {
+    display: block;
+    padding: 1px 5px;
+  }
+  .border-line {
+    width: 9rem;
+    margin-left: 2rem;
+  }
+  .border-line-second {
+    width: 9rem;
+    margin-left: 4.5rem;
+  }
+  .column-logo {
+    padding: 0 2rem;
+    margin-bottom: 1rem;
+  }
 }
 </style>

@@ -79,7 +79,7 @@ export default {
 section.open-salud-about {
   background-color: #fbfafa;
   position: relative;
-  height: 85vh;
+  height: 100vh;
 }
 
 .open-salud-about h1 {
@@ -135,12 +135,19 @@ section.open-salud-about {
   transform: rotate(-90deg);
   display: inline-flex;
 }
+
 @media (max-width: 600px) {
+  .open-salud-about h1 {
+    font-size: 3.2rem;
+  }
   .open-salud-about .floating-text {
     margin-top: 34px !important;
   }
   .row {
     background-color: #e4e4e4;
+  }
+  .container-img {
+    margin-top: 1rem;
   }
 }
 </style>

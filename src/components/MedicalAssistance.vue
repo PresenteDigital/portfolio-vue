@@ -1,13 +1,13 @@
 <template>
   <section id="medical-assistance" class="open-salud-medical-assistance">
-    <v-row class="row">
+    <v-row class="row container-assistance">
       <v-col sm="6" class="col-img d-flex flex-row justify-center">
         <g-image
           alt="Asistencia médica"
           src="~/assets/images/medical-assistance-image.PNG"
         />
       </v-col>
-      <v-col sm="6" class="px-16 py-8">
+      <v-col sm="6" class="px-16">
         <h3 class="title">{{ title }}</h3>
         <p class="mt-8">
           {{ subtitle }}
@@ -84,17 +84,24 @@ section {
   /*   position: relative; */
   /* height: 100vh; */
 }
+.container-assistance {
+  margin: 0px;
+}
 .row {
   background-color: #1d1d1f;
 }
 .col-img {
   background-color: #fbfafa;
-  padding: 1px;
+  padding: 0px;
   margin-left: 0;
 }
+.col {
+}
+
 .v-application .title {
   font-size: 4rem !important;
   line-height: 5rem;
+  margin-top: 5rem;
 }
 section h3 {
   color: #e1e1e1 !important;
@@ -137,8 +144,7 @@ section p {
   section h3 {
     width: 100%;
     margin-left: 0;
-    padding: 0 1rem !important;
-    margin-top: 1rem !important;
+    margin-top: 2rem !important;
   }
   .subtitle {
     width: 100%;
@@ -155,7 +161,7 @@ section p {
   }
   .v-application .title {
     font-size: 2rem !important;
-    line-height: 1rem;
+    line-height: 2rem;
   }
   .icons-listed {
     margin-top: 0px !important;
