@@ -42,7 +42,7 @@ export default {
       items: [
         {
           icon: "mdi-video-plus-outline",
-          text: `Videoconsulta`,
+          text: "Videoconsulta",
         },
         {
           icon: "mdi-cellphone-information",
