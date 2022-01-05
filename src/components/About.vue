@@ -57,7 +57,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: "V1.0 Opensaludpass cuida de ti, siempre",
+      default: "V1.1 Opensaludpass cuida de ti, siempre",
     },
     subtitle: {
       type: String,
@@ -147,6 +147,7 @@ section.open-salud-about {
     background-color: #e4e4e4;
   }
   .container-img {
+    height: 650px;
     margin-top: 1rem;
   }
 }

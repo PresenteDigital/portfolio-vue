@@ -52,9 +52,17 @@
             alt="Web sanitaria"
           />
           <g-image src="~/assets/images/rgpd.png" alt="RGPD" />
-          <g-image src="~/assets/images/applus-iso.png" alt="applus" />
-          <g-image src="~/assets/images/iso.png" alt="iso" />
-          <g-image src="~/assets/images/logo-receta.png" alt="logo-receta" />
+          <g-image
+            class="img3 "
+            src="~/assets/images/applus-iso.png"
+            alt="applus"
+          />
+          <g-image class="img4" src="~/assets/images/iso.png" alt="iso" />
+          <g-image
+            class="img5"
+            src="~/assets/images/logo-receta.png"
+            alt="logo-receta"
+          />
         </div>
         <v-row>
           <v-col offset-sm="1" sm="4">
@@ -173,6 +181,7 @@ img.g-image.logo {
     display: block;
     padding: 1px 5px;
     margin-left: 0;
+    text-align: center;
   }
   .border-line {
     width: 9rem;
@@ -185,6 +194,15 @@ img.g-image.logo {
   .column-logo {
     padding: 0 2rem;
     margin-bottom: 1rem;
+  }
+  .img3 {
+    width: 65px;
+  }
+  .img4 {
+    width: 114px;
+  }
+  .img5 {
+    width: 74px;
   }
 }
 </style>
