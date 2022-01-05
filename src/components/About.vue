@@ -57,7 +57,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: "V1.3 Opensaludpass cuida de ti, siempre",
+      default: "V1.4 Opensaludpass cuida de ti, siempre",
     },
     subtitle: {
       type: String,

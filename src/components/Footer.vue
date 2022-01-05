@@ -175,7 +175,15 @@ img.g-image.logo {
 .border {
   margin-left: 1rem;
 }
-
+.img3 {
+  width: 65px;
+}
+.img4 {
+  width: 114px;
+}
+.img5 {
+  width: 74px;
+}
 @media (max-width: 600px) {
   .container-imgs {
     display: block;
@@ -198,15 +206,6 @@ img.g-image.logo {
   .column-logo {
     padding: 0 2rem;
     margin-bottom: 1rem;
-  }
-  .img3 {
-    width: 65px;
-  }
-  .img4 {
-    width: 114px;
-  }
-  .img5 {
-    width: 74px;
   }
 }
 </style>
