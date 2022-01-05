@@ -138,7 +138,7 @@ section.open-salud-about {
 
 @media (max-width: 600px) {
   .open-salud-about h1 {
-    font-size: 3.2rem;
+    font-size: 3rem;
   }
   .open-salud-about .floating-text {
     margin-top: 34px !important;
