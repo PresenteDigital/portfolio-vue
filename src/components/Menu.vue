@@ -1,5 +1,6 @@
 <template>
   <section class="open-salud-menu">
+    <p>V1.0</p>
     <v-app-bar app elevation="0" color="#fbfafa">
       <v-app-bar-nav-icon
         @click="drawer = true"

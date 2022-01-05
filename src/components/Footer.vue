@@ -156,7 +156,9 @@ img.g-image.logo {
 }
 .container-imgs {
   display: flex;
-  justify-content: center;
+  justify-content: initial;
+  margin-left: 9rem;
+  margin-top: 2rem;
 }
 .container-imgs img {
   align-self: center;
@@ -170,6 +172,7 @@ img.g-image.logo {
   .container-imgs {
     display: block;
     padding: 1px 5px;
+    margin-left: 0;
   }
   .border-line {
     width: 9rem;
