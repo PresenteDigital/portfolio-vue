@@ -147,7 +147,7 @@ font-family: "Space Grotesk", sans-serif !important;
   }
 
   .open-salud-icons h3 {
-    margin-top: 33rem;
+    margin-top: 31rem;
 }
 }
 

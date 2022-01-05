@@ -183,13 +183,16 @@ img.g-image.logo {
     margin-left: 0;
     text-align: center;
   }
+  .border {
+    justify-content: space-evenly;
+  }
   .border-line {
     width: 9rem;
-    margin-left: 2rem;
+    margin-left: 0px;
   }
   .border-line-second {
     width: 9rem;
-    margin-left: 4.5rem;
+    margin-left: 0px;
   }
   .column-logo {
     padding: 0 2rem;
