@@ -1,6 +1,6 @@
 <template>
-  <section class="open-salud-icons pt-8"> 
-    <v-container grid-list-md py-16>
+  <section class="open-salud-icons"> 
+    <v-container grid-list-md py-1>
          <h3>{{title}}</h3>  
       <v-layout row wrap justify-space-between class="mt-16">
         <v-flex sm12 md4 v-for="({ icon, title, subtitle }, index) in items" :key="index">
@@ -142,13 +142,9 @@ font-family: "Space Grotesk", sans-serif !important;
   margin-top: 1px !important;
   }
 @media (max-width: 600px) {
-  .section-icons {
-    margin-top: 32rem;
-  }
 
-  .open-salud-icons h3 {
-    margin-top: 31rem;
-}
+
+
 }
 
 </style>

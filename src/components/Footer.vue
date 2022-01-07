@@ -94,7 +94,7 @@
 export default {
   data: () => ({
     data_first_column: [
-      "Condiciones para profesionales",
+      "Condiciones y para profesionales",
       "Condiciones para pacientes",
       "Telemedicina para empresas",
       "Contacto",

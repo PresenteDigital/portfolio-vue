@@ -1,6 +1,6 @@
 <template>
   <section class="open-salud-menu">
-    <v-app-bar app elevation="0" color="#fbfafa">
+    <v-app-bar app elevation="0" color="#fbfafa" class="menu-open-salud">
       <v-app-bar-nav-icon
         @click="drawer = true"
         class="d-flex d-sm-none"
@@ -13,7 +13,7 @@
           :key="item.title"
           :to="item.link"
           text
-          >{{ item.title }}</v-btn
+          >{{ item.title }}{{ item.icon }}</v-btn
         >
       </v-toolbar-items>
 
@@ -97,6 +97,14 @@ export default {
 };
 </script>
 <style>
+.menu-open-salud {
+  background: rgb(228, 228, 228);
+  background: linear-gradient(
+    90deg,
+    rgba(228, 228, 228, 1) 50%,
+    rgba(233, 233, 233, 1) 100%
+  );
+}
 .v-toolbar__content {
   display: flex;
   align-items: center;

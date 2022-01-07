@@ -81,8 +81,6 @@ export default {
 section {
   background-color: #fbfafa;
   font-family: "Space Grotesk", sans-serif !important;
-  /*   position: relative; */
-  /* height: 100vh; */
 }
 .container-assistance {
   margin: 0px;
@@ -102,10 +100,11 @@ section {
   font-size: 4rem !important;
   line-height: 5rem;
   margin-top: 5rem;
+  font-weight: 400 !important;
+  font-family: "Space Grotesk", sans-serif !important;
 }
 section h3 {
   color: #e1e1e1 !important;
-  font-weight: 400;
   font-size: 5rem !important;
   width: 35%;
   text-align: initial;
@@ -115,9 +114,6 @@ section p {
   line-height: 1.2;
   font-weight: 400;
   font-size: 1.5rem !important;
-}
-
-.open-salud-medical-assistance p {
 }
 
 .g-image {

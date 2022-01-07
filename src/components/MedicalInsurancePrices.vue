@@ -53,12 +53,16 @@
             </div>
           </v-card>
           <div class="items-list">
-            <v-list class="mt-8 list-icons-prices">
-              <v-list-item-group>
-                <v-list-item
-                  v-for="({ icon, text }, index) in services"
-                  :key="index"
-                >
+            <v-list
+              class="mt-8 list-icons-prices"
+              v-for="(service, index) in services"
+              :key="index"
+            >
+              <v-list-item-group
+                v-for="({ icon, text }, index) in service"
+                :key="index"
+              >
+                <v-list-item>
                   <v-list-item-icon>
                     <v-icon large>{{ icon }}</v-icon>
                   </v-list-item-icon>
@@ -81,7 +85,7 @@ export default {
       items: [
         {
           title: "Mensual",
-          price: "€ 11,95",
+          price: "€ 2,95",
           subtitle: `por familia`,
           buttonText: "Contratar",
           comment1: "Familia: Cónyuge/pareja e hijos menores de edad.",
@@ -89,7 +93,7 @@ export default {
         },
         {
           title: "Mensual",
-          price: "€ 11,95",
+          price: "€ 9,95",
           subtitle: `por familia`,
           buttonText: "Contratar",
           comment1: "Familia: Cónyuge/pareja e hijos menores de edad.",
@@ -97,7 +101,7 @@ export default {
         },
         {
           title: "Mensual",
-          price: "€ 11,95",
+          price: "€ 14,95",
           subtitle: `por familia`,
           buttonText: "Contratar",
           comment1: "Familia: Cónyuge/pareja e hijos menores de edad.",
@@ -105,22 +109,60 @@ export default {
         },
       ],
       services: [
-        {
-          icon: "mdi-video-plus-outline",
-          text: "Videoconsulta",
-        },
-        {
-          icon: "mdi-cellphone-information",
-          text: "Atención telefónica",
-        },
-        {
-          icon: "mdi-file-document-multiple-outline",
-          text: "Consulta escrita",
-        },
-        {
-          icon: "mdi-chat-processing-outline",
-          text: "Chat",
-        },
+        [
+          {
+            icon: "mdi-video-plus-outline",
+            text: "Videoconsulta",
+          },
+          {
+            icon: "mdi-cellphone-information",
+            text: "Atención telefónica",
+          },
+          {
+            icon: "mdi-file-document-multiple-outline",
+            text: "Consulta escrita",
+          },
+          {
+            icon: "mdi-chat-processing-outline",
+            text: "Chat",
+          },
+        ],
+        [
+          {
+            icon: "mdi-video-plus-outline",
+            text: "hola",
+          },
+          {
+            icon: "mdi-cellphone-information",
+            text: "Atención telefónica",
+          },
+          {
+            icon: "mdi-file-document-multiple-outline",
+            text: "Consulta escrita",
+          },
+          {
+            icon: "mdi-chat-processing-outline",
+            text: "Chat",
+          },
+        ],
+        [
+          {
+            icon: "mdi-video-plus-outline",
+            text: "Adios",
+          },
+          {
+            icon: "mdi-cellphone-information",
+            text: "Atención telefónica",
+          },
+          {
+            icon: "mdi-file-document-multiple-outline",
+            text: "Consulta escrita",
+          },
+          {
+            icon: "mdi-chat-processing-outline",
+            text: "Chat",
+          },
+        ],
       ],
     };
   },
@@ -161,7 +203,7 @@ section.open-salud-prices {
   font-weight: 400;
   color: rgb(29, 29, 30);
   letter-spacing: 0.2px;
-  width: 35%;
+  width: 50%;
   margin: auto;
   text-align: initial;
   margin-bottom: 2rem;
@@ -190,7 +232,7 @@ section.open-salud-prices {
   font-size: 2rem;
   font-weight: 500;
   margin-top: 2rem;
-  width: 35%;
+  width: 50%;
   margin: auto;
   text-align: initial;
 }
@@ -199,7 +241,7 @@ section.open-salud-prices {
   font-size: 1.5rem;
   font-weight: 400;
   margin-top: 2rem;
-  width: 35%;
+  width: 50%;
   margin: auto;
   text-align: initial;
 }

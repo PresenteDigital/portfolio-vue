@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <Menu />
-    <About />
+    <AboutUs />
     <Icons />
     <MedicalAssistance />
     <MedicalInsurancePrices />
@@ -12,7 +12,7 @@
 <script>
 import Menu from "@/components/Menu.vue";
 import Icons from "@/components/Icons.vue";
-import About from "@/components/About.vue";
+import AboutUs from "@/components/AboutUs.vue";
 import MedicalAssistance from "@/components/MedicalAssistance.vue";
 import MedicalInsurancePrices from "@/components/MedicalInsurancePrices.vue";
 import Footer from "@/components/Footer.vue";
@@ -21,7 +21,7 @@ export default {
   components: {
     Menu,
     Icons,
-    About,
+    AboutUs,
     MedicalAssistance,
     MedicalInsurancePrices,
     Footer,
