@@ -7,7 +7,7 @@
           src="~/assets/images/medical-assistance-image.PNG"
         />
       </v-col>
-      <v-col sm="6" class="px-16">
+      <v-col sm="6" class="px-16 main-column">
         <h3 class="title">{{ title }}</h3>
         <p class="mt-8">
           {{ subtitle }}
@@ -141,6 +141,10 @@ section p {
     width: 100%;
     margin-left: 0;
     margin-top: 2rem !important;
+  }
+  .main-column {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
   .subtitle {
     width: 100%;
