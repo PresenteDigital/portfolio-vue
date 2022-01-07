@@ -44,7 +44,7 @@
                       <v-btn
                         rounded
                         outlined
-                        color="#888888"
+                        color="#898989"
                         class="px-10 py-7 text-button"
                         >{{ buttonText }}</v-btn
                       >
@@ -97,19 +97,11 @@ export default {
           services: [
             {
               icon: "mdi-video-plus-outline",
-              text: "Videoconsulta",
+              text: "Descuentos en servicios médicos",
             },
             {
               icon: "mdi-cellphone-information",
-              text: "Atención telefónica",
-            },
-            {
-              icon: "mdi-file-document-multiple-outline",
-              text: "Consulta escrita",
-            },
-            {
-              icon: "mdi-chat-processing-outline",
-              text: "Chat",
+              text: "Servicios de bienestar",
             },
           ],
         },
@@ -123,19 +115,23 @@ export default {
           services: [
             {
               icon: "mdi-video-plus-outline",
-              text: "Prueba",
+              text: "Descuentos en servicios médicos",
             },
             {
               icon: "mdi-cellphone-information",
-              text: "Atención telefónica",
+              text: "Servicios de bienestar",
             },
             {
               icon: "mdi-file-document-multiple-outline",
-              text: "Consulta escrita",
+              text: "Servicios médicos",
+            },
+            {
+              icon: "mdi-file-document-multiple-outline",
+              text: "Servicios dentales",
             },
             {
               icon: "mdi-chat-processing-outline",
-              text: "Chat",
+              text: "Servicios de pediatría",
             },
           ],
         },
@@ -149,19 +145,39 @@ export default {
           services: [
             {
               icon: "mdi-video-plus-outline",
-              text: "Adios",
+              text: "Descuentos en servicios médicos",
             },
             {
               icon: "mdi-cellphone-information",
-              text: "Atención telefónica",
+              text: "Servicios de bienestar",
             },
             {
               icon: "mdi-file-document-multiple-outline",
-              text: "Consulta escrita",
+              text: "Servicios médicos",
+            },
+            {
+              icon: "mdi-file-document-multiple-outline",
+              text: "Servicios dentales",
             },
             {
               icon: "mdi-chat-processing-outline",
-              text: "Chat",
+              text: "Servicios de pediatría",
+            },
+            {
+              icon: "mdi-chat-processing-outline",
+              text: "Servicios dermatológicos",
+            },
+            {
+              icon: "mdi-chat-processing-outline",
+              text: "Servicios de traumatología",
+            },
+            {
+              icon: "mdi-chat-processing-outline",
+              text: "Servicios de oftalmología",
+            },
+            {
+              icon: "mdi-chat-processing-outline",
+              text: "Servicios de ginecología",
             },
           ],
         },
@@ -299,8 +315,8 @@ section.open-salud-prices {
 }
 .list-icons-prices {
   background-color: #e4e4e4 !important;
-  width: 65%;
-  margin-left: 5rem;
+  width: 85%;
+  margin-left: 2.5rem;
   text-align: initial;
 }
 
