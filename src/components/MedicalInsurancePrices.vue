@@ -123,7 +123,7 @@ export default {
           services: [
             {
               icon: "mdi-video-plus-outline",
-              text: "Mono",
+              text: "Prueba",
             },
             {
               icon: "mdi-cellphone-information",
