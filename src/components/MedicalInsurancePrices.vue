@@ -20,7 +20,15 @@
         <v-col
           sm="4"
           xs="12"
-          v-for="({ title, price, subtitle, buttonText, comment1, comment2 },
+          v-for="({
+            title,
+            price,
+            subtitle,
+            buttonText,
+            comment1,
+            comment2,
+            services,
+          },
           index) in items"
           :key="index"
         >
@@ -53,16 +61,12 @@
             </div>
           </v-card>
           <div class="items-list">
-            <v-list
-              class="mt-8 list-icons-prices"
-              v-for="(service, index) in services"
-              :key="index"
-            >
-              <v-list-item-group
-                v-for="({ icon, text }, index) in service"
-                :key="index"
-              >
-                <v-list-item>
+            <v-list class="mt-8 list-icons-prices">
+              <v-list-item-group>
+                <v-list-item
+                  v-for="({ icon, text }, index) in services"
+                  :key="index"
+                >
                   <v-list-item-icon>
                     <v-icon large>{{ icon }}</v-icon>
                   </v-list-item-icon>
@@ -90,6 +94,24 @@ export default {
           buttonText: "Contratar",
           comment1: "Familia: Cónyuge/pareja e hijos menores de edad.",
           comment2: "Compromiso de permanencia  mínimo de 3 meses.",
+          services: [
+            {
+              icon: "mdi-video-plus-outline",
+              text: "Videoconsulta",
+            },
+            {
+              icon: "mdi-cellphone-information",
+              text: "Atención telefónica",
+            },
+            {
+              icon: "mdi-file-document-multiple-outline",
+              text: "Consulta escrita",
+            },
+            {
+              icon: "mdi-chat-processing-outline",
+              text: "Chat",
+            },
+          ],
         },
         {
           title: "Mensual",
@@ -98,6 +120,24 @@ export default {
           buttonText: "Contratar",
           comment1: "Familia: Cónyuge/pareja e hijos menores de edad.",
           comment2: "Compromiso de permanencia  mínimo de 3 meses.",
+          services: [
+            {
+              icon: "mdi-video-plus-outline",
+              text: "Mono",
+            },
+            {
+              icon: "mdi-cellphone-information",
+              text: "Atención telefónica",
+            },
+            {
+              icon: "mdi-file-document-multiple-outline",
+              text: "Consulta escrita",
+            },
+            {
+              icon: "mdi-chat-processing-outline",
+              text: "Chat",
+            },
+          ],
         },
         {
           title: "Mensual",
@@ -106,63 +146,25 @@ export default {
           buttonText: "Contratar",
           comment1: "Familia: Cónyuge/pareja e hijos menores de edad.",
           comment2: "Compromiso de permanencia  mínimo de 3 meses.",
+          services: [
+            {
+              icon: "mdi-video-plus-outline",
+              text: "Adios",
+            },
+            {
+              icon: "mdi-cellphone-information",
+              text: "Atención telefónica",
+            },
+            {
+              icon: "mdi-file-document-multiple-outline",
+              text: "Consulta escrita",
+            },
+            {
+              icon: "mdi-chat-processing-outline",
+              text: "Chat",
+            },
+          ],
         },
-      ],
-      services: [
-        [
-          {
-            icon: "mdi-video-plus-outline",
-            text: "Videoconsulta",
-          },
-          {
-            icon: "mdi-cellphone-information",
-            text: "Atención telefónica",
-          },
-          {
-            icon: "mdi-file-document-multiple-outline",
-            text: "Consulta escrita",
-          },
-          {
-            icon: "mdi-chat-processing-outline",
-            text: "Chat",
-          },
-        ],
-        [
-          {
-            icon: "mdi-video-plus-outline",
-            text: "hola",
-          },
-          {
-            icon: "mdi-cellphone-information",
-            text: "Atención telefónica",
-          },
-          {
-            icon: "mdi-file-document-multiple-outline",
-            text: "Consulta escrita",
-          },
-          {
-            icon: "mdi-chat-processing-outline",
-            text: "Chat",
-          },
-        ],
-        [
-          {
-            icon: "mdi-video-plus-outline",
-            text: "Adios",
-          },
-          {
-            icon: "mdi-cellphone-information",
-            text: "Atención telefónica",
-          },
-          {
-            icon: "mdi-file-document-multiple-outline",
-            text: "Consulta escrita",
-          },
-          {
-            icon: "mdi-chat-processing-outline",
-            text: "Chat",
-          },
-        ],
       ],
     };
   },
