@@ -188,6 +188,29 @@ section p {
 .floating-label-mobile {
   display: none;
 }
+@media (max-width: 1263px) {
+  .container-assistance {
+    display: block !important;
+  }
+  .main-container-text,
+  .col-img {
+    max-width: 100%;
+  }
+  .floating-text,
+  .floating-label {
+    display: none;
+  }
+  .floating-label-mobile {
+    display: block;
+  }
+  .button-floating {
+    margin-bottom: 1rem;
+    color: #3238c4;
+    display: flex;
+    justify-content: initial;
+    align-items: baseline;
+  }
+}
 @media (max-width: 600px) {
   section h3 {
     width: 100%;

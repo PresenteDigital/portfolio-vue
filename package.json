@@ -7,6 +7,8 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
     "gridsome": "^0.7.0",
     "vuetify": "^2.6.1"
   },

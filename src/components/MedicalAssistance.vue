@@ -7,7 +7,7 @@
           src="~/assets/images/medical-assistance-image.PNG"
         />
       </v-col>
-      <v-col sm="6" class="px-16 main-column">
+      <v-col sm="6" class="px-16 main-container-text">
         <h3 class="title">{{ title }}</h3>
         <p class="mt-8">
           {{ subtitle }}
@@ -136,13 +136,30 @@ section p {
 .v-list-item.v-list-item--link.theme--light {
   padding: 0;
 }
+@media (max-width: 1263px) {
+  .container-assistance {
+    display: block !important;
+  }
+  .main-container-text,
+  .col-img {
+    max-width: 100%;
+  }
+  section h3 {
+    width: 100%;
+  }
+  .icons-description {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+  }
+}
 @media (max-width: 600px) {
   section h3 {
     width: 100%;
     margin-left: 0;
     margin-top: 2rem !important;
   }
-  .main-column {
+  .main-container-text {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
   }

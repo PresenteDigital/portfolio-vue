@@ -3,12 +3,12 @@
     <h3>
       {{ title }}
     </h3>
-    <v-flex xs12 sm12>
+    <v-flex xs12 sm12 md12>
       <p class="subtitle">
         {{ subtitle }}
       </p>
     </v-flex>
-    <v-flex xs12 sm12>
+    <v-flex xs12 sm12 md12>
       <p class="main-text">
         {{ content }}
       </p>
@@ -16,10 +16,8 @@
     <v-container grid-list-md py-16 class="prices-main-container">
       <!--       <v-layout row wrap>
         <v-flex xs12 sm4> -->
-      <v-row>
+      <v-row sm="4" xs="12" md="12">
         <v-col
-          sm="4"
-          xs="12"
           v-for="({
             title,
             price,
@@ -144,8 +142,8 @@ export default {
           comment2: "Compromiso de permanencia  mínimo de 3 meses.",
           services: [
             {
-              icon: "mdi-video-plus-outline",
-              text: "Descuentos en servicios médicos",
+              icon: "mio-euro_symbol",
+              text: "EUroooo",
             },
             {
               icon: "mdi-cellphone-information",
@@ -171,13 +169,10 @@ export default {
               icon: "mdi-chat-processing-outline",
               text: "Servicios de traumatología",
             },
+
             {
               icon: "mdi-chat-processing-outline",
-              text: "Servicios de oftalmología",
-            },
-            {
-              icon: "mdi-chat-processing-outline",
-              text: "Servicios de ginecología",
+              text: "Servicios de endocrinología",
             },
           ],
         },
@@ -319,7 +314,28 @@ section.open-salud-prices {
   margin-left: 2.5rem;
   text-align: initial;
 }
-
+@media (max-width: 1268px) {
+  .list-icons-prices {
+    display: flex;
+    justify-content: initial;
+  }
+  .open-salud-prices h3 {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  .subtitle {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  .main-text {
+    width: 100% !important;
+    padding: 0 1rem;
+  }
+  .list-icons-prices {
+    display: flex;
+    justify-content: center;
+  }
+}
 @media (max-width: 600px) {
   .open-salud-prices h3 {
     font-size: 2.5rem;

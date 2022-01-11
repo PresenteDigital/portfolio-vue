@@ -184,6 +184,25 @@ img.g-image.logo {
 .img5 {
   width: 74px;
 }
+@media (max-width: 1268px) {
+  .container-imgs {
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .borders {
+    border-bottom: 1px solid white;
+  }
+  .border {
+    justify-content: space-evenly;
+  }
+  .border-line {
+    display: none;
+  }
+  .border-line-second {
+    display: none;
+  }
+}
 @media (max-width: 600px) {
   .container-imgs {
     display: block;

@@ -3,11 +3,11 @@
     <v-app-bar app elevation="0" color="#fbfafa" class="menu-open-salud">
       <v-app-bar-nav-icon
         @click="drawer = true"
-        class="d-flex d-sm-none"
+        class="d-flex"
       ></v-app-bar-nav-icon>
       <g-image src="~/assets/images/logo.svg" width="150px" alt="Open salud" />
 
-      <v-toolbar-items class="hidden-sm-and-down nav-buttons">
+      <v-toolbar-items class="hidden-md-and-down nav-buttons">
         <v-btn
           v-for="item in nav_buttons"
           :key="item.title"
@@ -17,7 +17,7 @@
         >
       </v-toolbar-items>
 
-      <v-item-group class="log-buttons hidden-sm-and-down">
+      <v-item-group class="log-buttons hidden-md-and-down">
         <v-btn
           v-for="item in login_buttons"
           :key="item.title"
@@ -29,7 +29,7 @@
           >{{ item.title }}</v-btn
         >
       </v-item-group>
-      <v-item-group class="log-buttons hidden-md-and-up">
+      <v-item-group class="log-buttons hidden-lg-and-up">
         <v-btn class="mx-4" icon>
           <v-btn class="mx-4" icon>
             <v-icon size="24px">
