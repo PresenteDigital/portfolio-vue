@@ -3,7 +3,7 @@
     <v-app-bar app elevation="0" color="#fbfafa" class="menu-open-salud">
       <v-app-bar-nav-icon
         @click="drawer = true"
-        class="d-flex"
+        class="d-flex d-lg-none"
       ></v-app-bar-nav-icon>
       <g-image src="~/assets/images/logo.svg" width="150px" alt="Open salud" />
 
@@ -30,16 +30,12 @@
         >
       </v-item-group>
       <v-item-group class="log-buttons hidden-lg-and-up">
-        <v-btn class="mx-4" icon>
-          <v-btn class="mx-4" icon>
-            <v-icon size="24px">
-              mdi-login
-            </v-icon>
-          </v-btn>
-          <v-icon size="24px">
-            mdi-account-plus
-          </v-icon>
-        </v-btn>
+        <v-icon size="24px">
+          mdi-login
+        </v-icon>
+        <v-icon size="24px">
+          mdi-account-plus
+        </v-icon>
       </v-item-group>
     </v-app-bar>
     <!-- Add a navigation bar -->
