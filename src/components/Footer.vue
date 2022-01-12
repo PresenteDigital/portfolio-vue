@@ -202,6 +202,9 @@ img.g-image.logo {
   .border-line-second {
     display: none;
   }
+  .column-logo {
+    margin-left: 9.66%;
+  }
 }
 @media (max-width: 600px) {
   .container-imgs {
@@ -225,6 +228,7 @@ img.g-image.logo {
   .column-logo {
     padding: 0 2rem;
     margin-bottom: 1rem;
+    margin-left: 9.66%;
   }
 }
 </style>

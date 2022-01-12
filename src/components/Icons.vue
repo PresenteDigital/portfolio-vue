@@ -10,7 +10,7 @@
                <g-image :src="require(`!!assets-loader!@images/${icon.text}`)" :alt="title.text"/>
               </div> 
             </div>
-            <v-card-title class="mt-2 d-flex justify-center"
+            <v-card-title class="mt-4 d-flex justify-center"
               ><h2 class="title">{{title.text}}</h2></v-card-title
             >
 

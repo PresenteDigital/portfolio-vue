@@ -1,5 +1,5 @@
 <template>
-  <section class="pt-8 px-2 open-salud-prices">
+  <section class="pt-8 px-8 open-salud-prices">
     <h3>
       {{ title }}
     </h3>
@@ -14,8 +14,6 @@
       </p>
     </v-flex>
     <v-container grid-list-md py-16 class="prices-main-container">
-      <!--       <v-layout row wrap>
-        <v-flex xs12 sm4> -->
       <v-row sm="4" xs="12" md="12">
         <v-col
           v-for="({
@@ -94,11 +92,11 @@ export default {
           comment2: "Compromiso de permanencia  mínimo de 3 meses.",
           services: [
             {
-              icon: "mdi-video-plus-outline",
+              icon: "mdi-currency-eur",
               text: "Descuentos en servicios médicos",
             },
             {
-              icon: "mdi-cellphone-information",
+              icon: "mdi-spa-outline",
               text: "Servicios de bienestar",
             },
           ],
@@ -112,23 +110,23 @@ export default {
           comment2: "Compromiso de permanencia  mínimo de 3 meses.",
           services: [
             {
-              icon: "mdi-video-plus-outline",
+              icon: "mdi-currency-eur",
               text: "Descuentos en servicios médicos",
             },
             {
-              icon: "mdi-cellphone-information",
+              icon: "mdi-spa-outline",
               text: "Servicios de bienestar",
             },
             {
-              icon: "mdi-file-document-multiple-outline",
+              icon: "mdi-spa-outline",
               text: "Servicios médicos",
             },
             {
-              icon: "mdi-file-document-multiple-outline",
+              icon: "mdi-emoticon-outline",
               text: "Servicios dentales",
             },
             {
-              icon: "mdi-chat-processing-outline",
+              icon: "mdi-face-man",
               text: "Servicios de pediatría",
             },
           ],
@@ -142,36 +140,36 @@ export default {
           comment2: "Compromiso de permanencia  mínimo de 3 meses.",
           services: [
             {
-              icon: "mio-euro_symbol",
-              text: "EUroooo",
+              icon: "mdi-currency-eur",
+              text: "Descuentos en servicios médicos",
             },
             {
-              icon: "mdi-cellphone-information",
+              icon: "mdi-spa-outline",
               text: "Servicios de bienestar",
             },
             {
-              icon: "mdi-file-document-multiple-outline",
+              icon: "mdi-spa-outline",
               text: "Servicios médicos",
             },
             {
-              icon: "mdi-file-document-multiple-outline",
+              icon: "mdi-emoticon-outline",
               text: "Servicios dentales",
             },
             {
-              icon: "mdi-chat-processing-outline",
+              icon: "mdi-face-man",
               text: "Servicios de pediatría",
             },
             {
-              icon: "mdi-chat-processing-outline",
+              icon: "mdi-emoticon-outline",
               text: "Servicios dermatológicos",
             },
             {
-              icon: "mdi-chat-processing-outline",
+              icon: "mdi-emoticon-outline",
               text: "Servicios de traumatología",
             },
 
             {
-              icon: "mdi-chat-processing-outline",
+              icon: "mdi-emoticon-outline",
               text: "Servicios de endocrinología",
             },
           ],

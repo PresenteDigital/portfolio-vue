@@ -149,7 +149,7 @@ section p {
   }
   .icons-description {
     display: flex;
-    justify-content: center;
+    justify-content: initial;
     max-width: 100%;
   }
 }
