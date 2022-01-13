@@ -30,10 +30,10 @@
         >
       </v-item-group>
       <v-item-group class="log-buttons hidden-lg-and-up">
-        <v-icon size="24px">
+        <v-icon size="24px" class="login-responsive">
           mdi-login
         </v-icon>
-        <v-icon size="24px">
+        <v-icon size="24px" class="account-responsive">
           mdi-account-plus
         </v-icon>
       </v-item-group>
@@ -131,5 +131,8 @@ export default {
   letter-spacing: 0px;
   font-weight: 600;
   font-size: 0.8rem;
+}
+.account-responsive {
+  margin-left: 1rem;
 }
 </style>

@@ -64,8 +64,8 @@
             alt="logo-receta"
           />
         </div>
-        <v-row>
-          <v-col offset-sm="1" sm="4">
+        <v-row class="container-logos-copyright">
+          <v-col offset-sm="1" sm="4" class="logos">
             <v-btn
               class="mx-4"
               icon
@@ -78,7 +78,7 @@
               />
             </v-btn>
           </v-col>
-          <v-col offset-sm="1" sm="6">
+          <v-col offset-sm="1" sm="6" class="copyright">
             <v-card-text class="copyright"
               >Copyright © 2022 Open Healthcare. Todos los derechos
               reservados.</v-card-text
@@ -124,13 +124,13 @@ export default {
   height: 1px;
   width: 16rem;
   background-color: white;
-  margin-left: 9rem;
+  margin-left: 9%;
 }
 .border-line-second {
   height: 1px;
   width: 16rem;
   background-color: white;
-  margin-left: 9rem;
+  margin-left: 9%;
 }
 
 section.open-salud-footer {
@@ -157,7 +157,7 @@ img.g-image.logo {
 }
 
 .copyright {
-  text-align: left;
+  text-align: right;
   text-transform: uppercase;
   background-color: #1d1d1e;
   color: #eee;
@@ -167,10 +167,11 @@ img.g-image.logo {
   justify-content: initial;
   margin-left: 9rem;
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 .container-imgs img {
   align-self: center;
-  margin-right: 1rem;
+  margin-right: 3rem;
 }
 .border {
   margin-left: 1rem;
@@ -184,11 +185,18 @@ img.g-image.logo {
 .img5 {
   width: 74px;
 }
+.column-logo {
+  margin-left: 12% !important;
+}
 @media (max-width: 1268px) {
   .container-imgs {
     margin-left: 0;
     display: flex;
     justify-content: center;
+  }
+  .container-imgs img {
+    align-self: center;
+    margin-right: 1rem;
   }
   .borders {
     border-bottom: 1px solid white;
@@ -213,6 +221,11 @@ img.g-image.logo {
     margin-left: 0;
     text-align: center;
   }
+  .container-imgs img {
+    align-self: center;
+    margin-right: 0;
+  }
+
   .borders {
     border-bottom: 1px solid white;
   }
@@ -229,6 +242,13 @@ img.g-image.logo {
     padding: 0 2rem;
     margin-bottom: 1rem;
     margin-left: 9.66%;
+  }
+  .container-logos-copyright {
+    display: block;
+  }
+  .container-logos-copyright .logos {
+    display: flex;
+    justify-content: center;
   }
 }
 </style>

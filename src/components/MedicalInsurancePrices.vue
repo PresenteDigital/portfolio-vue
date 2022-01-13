@@ -40,7 +40,7 @@
                       <v-btn
                         rounded
                         outlined
-                        color="#898989"
+                        color="0C0C0C"
                         class="px-10 py-7 text-button"
                         >{{ buttonText }}</v-btn
                       >
@@ -63,10 +63,10 @@
                   v-for="({ icon, text }, index) in services"
                   :key="index"
                 >
-                  <v-list-item-icon>
+                  <v-list-item-icon class="icon-img">
                     <v-icon large>{{ icon }}</v-icon>
                   </v-list-item-icon>
-                  <v-list-item-content>
+                  <v-list-item-content class="icon-text">
                     <v-list-item-title>{{ text }}</v-list-item-title>
                   </v-list-item-content>
                 </v-list-item>
@@ -357,6 +357,12 @@ section.open-salud-prices {
     display: flex;
     justify-content: center;
     margin-left: 0;
+  }
+  .icon-img {
+    margin-right: 16px !important;
+  }
+  .icon-text div {
+    white-space: unset;
   }
 }
 </style>

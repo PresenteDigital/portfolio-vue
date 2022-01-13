@@ -183,5 +183,8 @@ section p {
   .icons-listed {
     margin-top: 0px !important;
   }
+  .col-img {
+    display: none !important;
+  }
 }
 </style>
