@@ -303,7 +303,7 @@ section.open-salud-prices {
   padding: 0 1rem;
   text-align: center;
   margin-top: 1rem;
-  color: #a2a2a2;
+  color: #0c0c0c;
   margin-bottom: 1rem;
 }
 .list-icons-prices {
