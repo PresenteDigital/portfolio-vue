@@ -2,6 +2,7 @@
   <section class="open-salud-menu">
     <v-app-bar app elevation="0" color="#fbfafa" class="menu-open-salud">
       <v-app-bar-nav-icon
+        aria-label="toggle-menu"
         @click="drawer = true"
         class="d-flex d-lg-none"
       ></v-app-bar-nav-icon>
