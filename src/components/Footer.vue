@@ -113,7 +113,7 @@ section.open-salud-footer .v-card {
 .border-line {
   height: 1px;
   width: 16rem;
-  background-color: white;
+  background-color: #fff;
   margin-left: 16px;
 }
 
