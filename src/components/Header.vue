@@ -1,13 +1,16 @@
 <template>
-  <section class="open-salud-menu">
-    <v-app-bar app elevation="0" color="#fbfafa" class="menu-open-salud">
+  <section class="open-salud-header">
+    <v-app-bar app elevation="0" class="px-lg-16 px-xs-0">
+      <!-- Navigation buttons in RWD -->
       <v-app-bar-nav-icon
         aria-label="toggle-menu"
         @click="drawer = true"
         class="d-flex d-lg-none"
       ></v-app-bar-nav-icon>
+
       <g-image src="~/assets/images/logo.svg" width="150px" alt="Open salud" />
 
+      <!-- Navigation buttons in desktop -->
       <v-toolbar-items class="hidden-md-and-down nav-buttons">
         <v-btn
           v-for="item in nav_buttons"
@@ -18,28 +21,35 @@
         >
       </v-toolbar-items>
 
-      <v-item-group class="log-buttons hidden-md-and-down">
+      <!-- Login buttons desktop -->
+      <v-item-group class="log-buttons-desktop hidden-md-and-down">
         <v-btn
           v-for="item in login_buttons"
           :key="item.title"
           rounded
           :outlined="item.outlined"
           :to="item.link"
-          color="primary"
-          class="px-10 py-5 ml-12 text-button"
-          >{{ item.title }}</v-btn
+          class="px-10 py-5 ml-6"
+          >{{ item.title }}
+          <v-icon v-if="item.icon" right dark>
+            {{ item.icon }}
+          </v-icon></v-btn
         >
       </v-item-group>
-      <v-item-group class="log-buttons hidden-lg-and-up">
-        <v-icon size="24px" class="login-responsive">
-          mdi-login
-        </v-icon>
-        <v-icon size="24px" class="account-responsive">
-          mdi-account-plus
-        </v-icon>
+
+      <!-- Login buttons in RWD -->
+      <v-item-group class="log-buttons-rwd hidden-lg-and-up">
+        <v-btn icon small class="mx-1">
+          <v-icon>mdi-login</v-icon>
+        </v-btn>
+        <v-btn icon small class="mx-1">
+          <v-icon>
+            mdi-account-plus
+          </v-icon>
+        </v-btn>
       </v-item-group>
     </v-app-bar>
-    <!-- Add a navigation bar -->
+
     <v-navigation-drawer v-model="drawer" absolute temporary>
       <v-list nav dense>
         <v-list-item-group>
@@ -93,8 +103,9 @@ export default {
   },
 };
 </script>
+
 <style>
-.menu-open-salud {
+.open-salud-header .v-app-bar {
   background: rgb(228, 228, 228);
   background: linear-gradient(
     90deg,
@@ -102,38 +113,33 @@ export default {
     rgba(233, 233, 233, 1) 100%
   );
 }
-.v-toolbar__content {
+.open-salud-header .v-toolbar__content {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  text-align: center;
+  justify-content: space-between;
+  /* padding: 20px 100px; */
 }
-.open-salud-menu .nav-buttons .v-btn {
+.open-salud-header .nav-buttons .v-btn {
   font-family: "Space Grotesk", sans-serif;
-  color: #3238c4 !important;
+  color: #3238c4;
   text-transform: capitalize;
   font-weight: 400;
 }
-.open-salud-menu .log-buttons .v-btn {
+
+.open-salud-header .log-buttons-desktop .v-btn.v-btn--outlined {
+  color: #3238c4;
+  border-color: #3238c4;
+  margin: 0;
+}
+.open-salud-header .log-buttons-desktop .v-btn.v-btn--is-elevated {
+  background-color: #3238c4;
+  border-color: #3238c4;
+  color: #eee;
   margin: 0;
 }
 
-.open-salud-menu .log-buttons .v-btn.v-btn--outlined {
-  color: #3238c4;
-  border-color: 3238c4;
-}
-.open-salud-menu .log-buttons .v-btn.v-btn--is-elevated {
-  background-color: #3238c4 !important;
-  border-color: #3238c4 !important;
-  color: #eee;
-}
-
-.open-salud-menu .log-buttons .v-btn .v-btn__content {
+.open-salud-header .log-buttons-desktop .v-btn .v-btn__content {
   letter-spacing: 0px;
   font-weight: 600;
   font-size: 0.8rem;
-}
-.account-responsive {
-  margin-left: 1rem;
 }
 </style>

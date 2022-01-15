@@ -1,7 +1,7 @@
 <template>
   <section id="medical-assistance" class="open-salud-medical-assistance">
     <v-row class="row container-assistance">
-      <v-col sm="6" class="col-img d-flex flex-row justify-center">
+      <v-col sm="6" class="col-img d-flex flex-row justify-center d-xs-none ">
         <g-image
           alt="Asistencia médica"
           src="~/assets/images/medical-assistance-image.PNG"
@@ -67,7 +67,7 @@ export default {
     subtitle: {
       type: String,
       default:
-        "Incluida sin coste con libre elección de médico de familia y pediatra,disponible los 7 días de la semana.",
+        "Incluida sin coste con libre elección de médico de familia y pediatra, disponible los 7 días de la semana.",
     },
     subtitle2: {
       type: String,
@@ -80,7 +80,7 @@ export default {
 <style scoped>
 section {
   background-color: #fbfafa;
-  font-family: "Space Grotesk", sans-serif !important;
+  font-family: "Space Grotesk", sans-serif;
 }
 .container-assistance {
   margin: 0px;
@@ -92,8 +92,6 @@ section {
   background-color: #fbfafa;
   padding: 0px;
   margin-left: 0;
-}
-.col {
 }
 
 .v-application .title {

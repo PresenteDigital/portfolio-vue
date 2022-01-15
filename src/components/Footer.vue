@@ -1,13 +1,10 @@
 <template>
   <section class="open-salud-footer">
     <v-footer padless dark class="footer-dark">
-      <div class="borders">
-        <div class="border-line"></div>
-        <div class="border-line-second"></div>
-      </div>
       <v-card class="flex py-2">
         <v-row>
-          <v-col class="border" offset-sm="1" sm="3">
+          <v-col sm="3">
+            <div class="border-line"></div>
             <v-card-text
               class=" white--text"
               v-for="(item, index) in data_first_column"
@@ -16,7 +13,8 @@
               {{ item }}
             </v-card-text>
           </v-col>
-          <v-col sm="3" class="border">
+          <v-col sm="3">
+            <div class="border-line"></div>
             <v-card-text
               class=" white--text"
               v-for="(item, index) in data_second_column"
@@ -25,12 +23,7 @@
               {{ item }}
             </v-card-text>
           </v-col>
-          <v-col
-            offset-sm="2"
-            md="3"
-            xs="12"
-            class="d-flex flex-column column-logo"
-          >
+          <v-col offset-sm="3" sm="2" class="d-flex flex-column column-logo">
             <g-image
               class="logo"
               src="~/assets/images/opensalud_white.svg"
@@ -38,15 +31,7 @@
             />
           </v-col>
         </v-row>
-        <!-- <v-row class="my-8">
-          <v-col offset-md="1" sm="3" class="d-flex flex-column">
-            <g-image
-              src="~/assets/images/im_logo_santaria.png"
-              alt="Web sanitaria"
-            />
-          </v-col>
-        </v-row> -->
-        <div class="container-imgs">
+        <div class="container-imgs mt-6">
           <g-image
             src="~/assets/images/im_logo_santaria.png"
             alt="Web sanitaria"
@@ -64,8 +49,8 @@
             alt="logo-receta"
           />
         </div>
-        <v-row class="container-logos-copyright">
-          <v-col offset-sm="1" sm="4" class="logos">
+        <v-row class="container-logos-copyright mt-6">
+          <v-col>
             <v-btn
               class="mx-4"
               icon
@@ -111,40 +96,29 @@ export default {
 </script>
 
 <style>
+section.open-salud-footer .v-card {
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #eee;
+  display: block;
+  transition-duration: 0.5s;
+}
 .footer-dark {
   display: block;
+  padding: 60px 20px;
   background-color: #1e1e1e !important;
-}
-.borders {
-  padding-top: 2rem;
-  display: flex;
 }
 
 .border-line {
   height: 1px;
   width: 16rem;
   background-color: white;
-  margin-left: 9%;
-}
-.border-line-second {
-  height: 1px;
-  width: 16rem;
-  background-color: white;
-  margin-left: 9%;
+  margin-left: 16px;
 }
 
 section.open-salud-footer {
   font-family: "Space Grotesk", sans-serif;
-}
-
-.border.col-sm-3.col {
-  padding-bottom: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #eee;
-  display: block;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
 }
 
 img.g-image.logo {
@@ -164,17 +138,13 @@ img.g-image.logo {
 }
 .container-imgs {
   display: flex;
-  justify-content: initial;
-  margin-left: 9rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  justify-content: start;
+  padding-left: 0px;
+  flex-wrap: wrap;
 }
 .container-imgs img {
   align-self: center;
   margin-right: 3rem;
-}
-.border {
-  margin-left: 1rem;
 }
 .img3 {
   width: 65px;
@@ -185,63 +155,16 @@ img.g-image.logo {
 .img5 {
   width: 74px;
 }
-.column-logo {
-  margin-left: 12% !important;
-}
+
 @media (max-width: 1268px) {
-  .container-imgs {
-    margin-left: 0;
-    display: flex;
-    justify-content: center;
-  }
   .container-imgs img {
     align-self: center;
     margin-right: 1rem;
   }
-  .borders {
-    border-bottom: 1px solid white;
-  }
-  .border {
-    justify-content: space-evenly;
-  }
-  .border-line {
-    display: none;
-  }
-  .border-line-second {
-    display: none;
-  }
-  .column-logo {
-    margin-left: 9.66%;
-  }
 }
 @media (max-width: 600px) {
-  .container-imgs {
-    display: block;
-    padding: 1px 5px;
-    margin-left: 0;
-    text-align: center;
-  }
-  .container-imgs img {
-    align-self: center;
-    margin-right: 0;
-  }
-
-  .borders {
-    border-bottom: 1px solid white;
-  }
-  .border {
-    justify-content: space-evenly;
-  }
-  .border-line {
-    display: none;
-  }
-  .border-line-second {
-    display: none;
-  }
-  .column-logo {
-    padding: 0 2rem;
-    margin-bottom: 1rem;
-    margin-left: 9.66%;
+  .copyright {
+    text-align: left;
   }
   .container-logos-copyright {
     display: block;

@@ -1,5 +1,5 @@
 <template>
-  <section class="open-salud-icons"> 
+  <section class="open-salud-professionals"> 
     <v-container grid-list-md py-1>
          <h3>{{title}}</h3>  
       <v-layout row wrap justify-space-between class="mt-16">
@@ -88,17 +88,16 @@ export default {
 <style scope>
 
 
-section.open-salud-icons {
-  /* height: 100vh; */
+section.open-salud-professionals {
   background-color: #e4e4e4;
     font-family: "Space Grotesk", sans-serif;
 }
-.open-salud-icons h2.title {
+.open-salud-professionals h2.title {
   text-align: left;
 color: #3238c4 !important;
 font-family: "Space Grotesk", sans-serif !important;
 }
-.open-salud-icons h3 {
+.open-salud-professionals h3 {
       text-align: center;
   line-height: 1.2;
   font-size: 2rem;
@@ -110,21 +109,21 @@ font-family: "Space Grotesk", sans-serif !important;
   justify-content: center;
 }
 
-.open-salud-icons .icons-main-container {
+.open-salud-professionals .icons-main-container {
   flex-direction: row;
     justify-content: space-around;
     display: flex;
 }
-.open-salud-icons .card-container {
+.open-salud-professionals .card-container {
   box-shadow: none !important;
   background: transparent !important;
 }
-.open-salud-icons .icons-container {
+.open-salud-professionals .icons-container {
   display: flex;
   justify-content: center;
 }
 
-.open-salud-icons .container-image {
+.open-salud-professionals .container-image {
   display: flex;
   justify-content: center;
   width: 15rem;
@@ -134,17 +133,13 @@ font-family: "Space Grotesk", sans-serif !important;
   -webkit-box-shadow: 3px 10px 15px 15px #bebebe;
   box-shadow: 3px 10px 15px 15px #bebebe;
 }
-.open-salud-icons .g-image-icons {
+.open-salud-professionals  .g-image-icons {
   -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
   filter: drop-shadow(12px 9px 4px rgba(0, 0, 0, 0.1));
 }
-.subtitle-text{
+.open-salud-professionals {
   margin-top: 1px !important;
   }
-@media (max-width: 600px) {
 
-
-
-}
 
 </style>

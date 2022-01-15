@@ -1,40 +1,47 @@
 <template>
-  <section class="open-salud-about pt-8">
-    <v-container>
-      <v-row no-gutters>
-        <v-col cols="12" offset-sm="1" sm="5">
-          <h5 class="mb-8">{{ subtitle }}</h5>
-          <h1>{{ title }}</h1>
-          <v-list class="mt-8">
+  <section class="open-salud-about">
+    <v-row class="row container-assistance">
+      <v-col sm="6" class="main-container-text px-16">
+        <p class="mt-8">
+          {{ subtitle }}
+        </p>
+        <h3>{{ title }}</h3>
+
+        <v-col sm="6" class="icons-description">
+          <v-list class="mt-8 icons-listed">
             <v-list-item-group>
-              <v-list-item v-for="{ icon, text } in items" :key="text">
+              <v-list-item
+                v-for="({ icon, text }, index) in items"
+                :key="index"
+              >
                 <v-list-item-icon>
-                  <v-icon large dense>{{ icon }}</v-icon>
+                  <v-icon large v-text="icon"></v-icon>
                 </v-list-item-icon>
                 <v-list-item-content>
-                  <v-list-item-title>{{ text }}</v-list-item-title>
+                  <v-list-item-title v-text="text"></v-list-item-title>
                 </v-list-item-content>
               </v-list-item>
             </v-list-item-group>
           </v-list>
-          <v-row class="mt-4">
-            <v-btn class="ma-2" outlined rounded>
-              {{ button_text }}
-            </v-btn>
-          </v-row>
-          <div class="floating-text mt-8">
-            <div>{{ label_text }}</div>
-          </div>
         </v-col>
-        <v-col offset-sm="1" sm="5" cols="12" class="container-img">
-          <g-image
-            alt="Beneficios sociales"
-            src="~/assets/images/social-benefits.jpg"
-            fit="fill"
-          />
-        </v-col>
-      </v-row>
-    </v-container>
+        <v-row class="mt-4 button-floating">
+          <v-btn class="px-10 py-5 ml-6" rounded>
+            {{ button_text }}
+          </v-btn>
+          <div class="floating-label-mobile">{{ label_text }}</div>
+        </v-row>
+        <div class="floating-container">
+          <div class="floating-text mt-8"></div>
+          <div class="floating-label">{{ label_text }}</div>
+        </div>
+      </v-col>
+      <v-col sm="6" class="col-img d-flex flex-row justify-center">
+        <g-image
+          alt="Asistencia médica"
+          src="~/assets/images/man-and-woman-sitting-on-sofa-with-laptop-sized.png"
+        />
+      </v-col>
+    </v-row>
   </section>
 </template>
 
@@ -45,11 +52,11 @@ export default {
       items: [
         {
           icon: "mdi-check-circle-outline",
-          text: `Asistencia medica online ilimitada, con libre elección de médido de familia y pediatra`,
+          text: `Asistencia médica online ilimitada, con libre elección de médico de familia y pediatra.`,
         },
         {
           icon: "mdi-check-circle-outline",
-          text: `Además, consultas presenciales, pruebas, intervenciones y tratamientos a precio bonificado`,
+          text: `Además, consultas presenciales, pruebas, intervenciones y tratamientos a precio bonificado.`,
         },
       ],
     };
@@ -57,11 +64,15 @@ export default {
   props: {
     title: {
       type: String,
-      default: "V1.4 Opensaludpass cuida de ti, siempre",
+      default: "Opensaludpass cuida de ti, siempre",
     },
     subtitle: {
       type: String,
-      default: "Telemedicina",
+      default: "TELEMEDICINA",
+    },
+    subtitle2: {
+      type: String,
+      default: "Tipos de consulta disponibles:",
     },
     button_text: {
       type: String,
@@ -69,7 +80,7 @@ export default {
     },
     label_text: {
       type: String,
-      default: "Sabel más",
+      default: "Saber más",
     },
   },
 };
@@ -77,38 +88,22 @@ export default {
 
 <style scoped>
 section.open-salud-about {
-  background-color: #fbfafa;
-  position: relative;
-  height: 100vh;
+  /*   height: 100vh; */
+  background-color: #e4e4e4;
+  font-family: "Space Grotesk", sans-serif !important;
 }
-
-.open-salud-about h1 {
+.open-salud-about p {
+  color: black;
   line-height: 1.2;
-  font-size: 3.5rem;
-  font-family: "Space Grotesk", sans-serif;
   font-weight: 400;
-  color: rgb(29, 29, 30);
-  letter-spacing: 0.2px;
+  font-size: 1rem;
 }
-
-.open-salud-about h5 {
-  text-transform: uppercase;
-  font-weight: 400;
-  letter-spacing: 0.1rem;
+.open-salud-about .main-container-text {
+  padding-left: 100px;
+  padding-top: 40px;
 }
-
-.open-salud-about div.v-list-item__title {
-  font-family: "Space Grotesk", sans-serif;
-  white-space: normal;
-}
-
-.open-salud-about .v-list.v-sheet.theme--light {
-  background-color: transparent;
-}
-
-.open-salud-about .g-image {
-  height: 100%;
-  width: 100%;
+.open-salud-about .container-assistance {
+  margin: 0px;
 }
 
 .open-salud-about .v-btn {
@@ -118,8 +113,42 @@ section.open-salud-about {
   font-weight: 600;
   font-size: 0.8rem;
   font-family: "Space Grotesk", sans-serif;
+  -webkit-box-shadow: 13px 12px 39px -5px #87888a;
+  box-shadow: 13px 12px 39px -5px #87888a;
+  background-color: #fff;
 }
 
+.open-salud-about h3 {
+  font-size: 4rem;
+  line-height: 4.5rem;
+  margin-top: 1rem;
+  font-weight: 100;
+}
+
+.open-salud-about .col-img {
+  background-color: #fbfafa;
+  padding: 0;
+  margin-left: 0;
+}
+
+.open-salud-about .g-image {
+  width: 100vw;
+}
+
+.v-list.v-sheet.theme--light {
+  background-color: transparent;
+}
+.open-salud-about .v-list-item__title {
+  white-space: normal;
+}
+
+.open-salud-about .v-list-item.v-list-item--link.theme--light {
+  padding: 0;
+  width: 25rem;
+}
+.open-salud-about .floating-container {
+  position: relative;
+}
 .open-salud-about .floating-text {
   color: #3238c4;
   border-right: 1px solid #3238c4;
@@ -129,26 +158,94 @@ section.open-salud-about {
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
   text-align: right;
+  margin-top: 0 !important;
+  height: 110px;
+  position: absolute;
+  left: 100%;
 }
 
-.open-salud-about .floating-text div {
+.open-salud-about .floating-label {
   transform: rotate(-90deg);
   display: inline-flex;
+  color: #3238c4;
+  font-family: "Space Grotesk", sans-serif !important;
+  right: -10%;
+  position: absolute;
+  margin-top: 4%;
 }
-
+.open-salud-about .floating-label-mobile {
+  display: none;
+}
+@media (max-width: 1263px) {
+  .open-salud-about .container-assistance {
+    display: block !important;
+  }
+  .open-salud-about .main-container-text,
+  .open-salud-about .col-img {
+    max-width: 100%;
+  }
+  .open-salud-about .floating-text,
+  .open-salud-about .floating-label {
+    display: none;
+  }
+  .open-salud-about .floating-label-mobile {
+    display: block;
+  }
+  .open-salud-about .button-floating {
+    margin-bottom: 1rem;
+    color: #3238c4;
+    display: flex;
+    justify-content: initial;
+    align-items: baseline;
+  }
+}
 @media (max-width: 600px) {
-  .open-salud-about h1 {
-    font-size: 3rem;
+  .main-container-text {
+    padding: 1rem !important;
   }
-  .open-salud-about .floating-text {
-    margin-top: 34px !important;
+  section.open-salud-about h3 {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 2rem !important;
   }
-  .row {
-    background-color: #e4e4e4;
+  .open-salud-about.main-container-text {
+    padding: 1rem 1rem !important;
   }
-  .container-img {
-    height: 650px;
-    margin-top: 1rem;
+  .open-salud-about.v-list-item.v-list-item--link.theme--light {
+    width: 100%;
+  }
+  .open-salud-about.floating-text,
+  .open-salud-about.floating-label {
+    display: none;
+  }
+  .open-salud-about.floating-label-mobile {
+    display: block;
+  }
+  .open-salud-about.button-floating {
+    margin-bottom: 1rem;
+    color: #3238c4;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+  }
+
+  .open-salud-about.subtitle {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 1rem !important;
+  }
+  .open-salud-about.section-icons {
+    margin-top: 35rem;
+  }
+
+  .open-salud-about.v-application .title {
+    font-size: 2rem !important;
+    line-height: 2rem;
+  }
+
+  section.open-salud-about h3 {
+    font-size: 2rem !important;
+    line-height: 2rem;
   }
 }
 </style>

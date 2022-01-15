@@ -196,7 +196,7 @@ export default {
   },
 };
 </script>
-<style scope>
+<style scoped>
 section {
   background-color: #e4e4e4 !important;
 }

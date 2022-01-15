@@ -1,8 +1,8 @@
 <template>
   <Layout>
-    <Menu />
-    <AboutUs />
-    <Icons />
+    <Header />
+    <About />
+    <Professionals />
     <MedicalAssistance />
     <MedicalInsurancePrices />
     <Footer />
@@ -10,27 +10,22 @@
 </template>
 
 <script>
-import Menu from "@/components/Menu.vue";
-import Icons from "@/components/Icons.vue";
-import AboutUs from "@/components/AboutUs.vue";
+import Header from "@/components/Header.vue";
+import About from "@/components/About.vue";
+import Professionals from "@/components/Professionals.vue";
+
 import MedicalAssistance from "@/components/MedicalAssistance.vue";
 import MedicalInsurancePrices from "@/components/MedicalInsurancePrices.vue";
 import Footer from "@/components/Footer.vue";
 
 export default {
   components: {
-    Menu,
-    Icons,
-    AboutUs,
+    Header,
+    About,
+    Professionals,
     MedicalAssistance,
     MedicalInsurancePrices,
     Footer,
   },
 };
 </script>
-
-<style>
-.home-links a {
-  margin-right: 1rem;
-}
-</style>
