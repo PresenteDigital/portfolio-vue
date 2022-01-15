@@ -88,7 +88,6 @@ export default {
 
 <style scoped>
 section.open-salud-about {
-  /*   height: 100vh; */
   background-color: #e4e4e4;
   font-family: "Space Grotesk", sans-serif !important;
 }
