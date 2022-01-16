@@ -39,11 +39,11 @@
         </v-row>
         <div class="container-imgs mt-6">
           <g-image
-            v-for="({ src, alt, width }, index) in sanitary_logos"
+            v-for="({ src, alt, style }, index) in sanitary_logos"
             :key="index"
             :src="require(`!!assets-loader!@images/${src}`)"
             :alt="alt"
-            width="100"
+            :style="style"
           />
         </div>
         <v-row class="container-logos-copyright mt-6">
@@ -99,18 +99,17 @@ export default {
       {
         src: "applus-iso.png",
         alt: "App plus",
-        width: "65",
+        style: "width: 65px",
       },
-
       {
         src: "iso.png",
         alt: "iso",
-        width: "114",
+        style: "width: 114px",
       },
       {
         src: "logo-receta.png",
         alt: "logo-receta",
-        width: "74",
+        style: "width: 74px",
       },
     ],
     copyright: `Copyright © 2022 Open Healthcare. Todos los derechos

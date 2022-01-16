@@ -216,7 +216,7 @@ section.open-salud-about {
     cursor: pointer;
     height: 7.5rem;
     position: absolute;
-    left: 90%;
+    left: 85%;
     bottom: 0;
   }
 

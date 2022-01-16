@@ -1,7 +1,7 @@
 <template>
   <section id="medical-assistance" class="open-salud-medical-assistance">
     <v-row class="row container-assistance">
-      <v-col sm="6" class="col-img d-flex flex-row justify-center d-xs-none ">
+      <v-col sm="6" class="col-img d-flex flex-row justify-center">
         <g-image
           alt="Asistencia médica"
           src="~/assets/images/medical-assistance-image.PNG"
@@ -84,7 +84,7 @@ section {
 }
 
 .main-container-text {
-  padding: 30px 60px;
+  padding: 30px 70px;
 }
 .container-assistance {
   margin: 0px;
@@ -149,6 +149,12 @@ section p {
   section h3 {
     width: 100%;
   }
+  .open-salud-medical-assistance .main-container-text {
+    min-height: 50px;
+  }
+  .col-img {
+    height: 50vh;
+  }
 }
 @media (max-width: 600px) {
   section h3 {
@@ -173,16 +179,14 @@ section p {
   .icons-listed {
     margin-top: 0px !important;
   }
-  .col-img {
-    display: none !important;
-  }
 
   .main-container-text {
-    padding: 1px 1px;
+    padding: 20px 40px;
   }
 
-  .open-salud-medical-assistance .col {
-    min-height: 40vh;
+  .open-salud-medical-assistance .main-container-text,
+  .col-img {
+    min-height: 50vh;
   }
 }
 </style>
