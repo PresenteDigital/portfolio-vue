@@ -17,6 +17,7 @@
           <v-list class="mt-md-8">
             <v-list-item-group>
               <v-list-item
+                aria-label="availability"
                 v-for="({ icon, text }, index) in items"
                 :key="index"
               >

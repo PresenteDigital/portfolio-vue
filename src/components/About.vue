@@ -22,7 +22,12 @@
             </v-list-item-group>
           </v-list>
           <v-row class="mt-4 button-floating">
-            <v-btn class="px-10 py-5 ml-4" rounded outlined>
+            <v-btn
+              class="px-10 py-5 ml-4"
+              rounded
+              outlined
+              aria-label="contratar"
+            >
               {{ button_text }}
             </v-btn>
           </v-row>
