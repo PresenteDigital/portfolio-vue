@@ -58,11 +58,12 @@
           </v-card>
           <div class="items-list">
             <v-list class="mt-8 list-icons-prices">
-              <v-list-item-group>
+              <v-list-item-group :aria-label="title">
                 <v-list-item
                   v-for="({ icon, text }, index) in services"
                   :key="index"
                   :aria-labelledby="text"
+                  role="listitem"
                 >
                   <v-list-item-icon class="icon-img">
                     <v-icon large>{{ icon }}</v-icon>
