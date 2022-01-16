@@ -65,7 +65,7 @@
                   :aria-labelledby="text"
                   role="option"
                 >
-                  <v-list-item-icon class="icon-img">
+                  <v-list-item-icon class="icon-img" role="option">
                     <v-icon large>{{ icon }}</v-icon>
                   </v-list-item-icon>
                   <v-list-item-content class="icon-text">
