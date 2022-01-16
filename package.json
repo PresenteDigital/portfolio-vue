@@ -1,5 +1,6 @@
 {
-  "name": "portfolio-app",
+  "name": "open-medicina",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "build": "gridsome build",

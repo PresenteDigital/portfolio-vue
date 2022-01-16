@@ -1,7 +1,7 @@
 <template>
   <section class="open-salud-footer">
     <v-footer padless dark class="footer-dark">
-      <v-card class="flex py-2">
+      <v-card class="flex py-2 px-6">
         <v-row>
           <v-col sm="3">
             <div class="border-line"></div>
@@ -23,7 +23,13 @@
               {{ item }}
             </v-card-text>
           </v-col>
-          <v-col offset-sm="3" sm="2" class="d-flex flex-column column-logo">
+          <v-col
+            justify-end
+            offset-lg="3"
+            lg="2"
+            sm="6"
+            class="d-flex flex-column column-logo"
+          >
             <g-image
               class="logo"
               src="~/assets/images/opensalud_white.svg"
@@ -33,20 +39,11 @@
         </v-row>
         <div class="container-imgs mt-6">
           <g-image
-            src="~/assets/images/im_logo_santaria.png"
-            alt="Web sanitaria"
-          />
-          <g-image src="~/assets/images/rgpd.png" alt="RGPD" />
-          <g-image
-            class="img3 "
-            src="~/assets/images/applus-iso.png"
-            alt="applus"
-          />
-          <g-image class="img4" src="~/assets/images/iso.png" alt="iso" />
-          <g-image
-            class="img5"
-            src="~/assets/images/logo-receta.png"
-            alt="logo-receta"
+            v-for="({ src, alt, width }, index) in sanitary_logos"
+            :key="index"
+            :src="require(`!!assets-loader!@images/${src}`)"
+            :alt="alt"
+            width="100"
           />
         </div>
         <v-row class="container-logos-copyright mt-6">
@@ -64,10 +61,7 @@
             </v-btn>
           </v-col>
           <v-col offset-sm="1" sm="6" class="copyright">
-            <v-card-text class="copyright"
-              >Copyright © 2022 Open Healthcare. Todos los derechos
-              reservados.</v-card-text
-            >
+            <v-card-text class="copyright">{{ copyright }}</v-card-text>
           </v-col>
         </v-row>
       </v-card>
@@ -91,6 +85,36 @@ export default {
       { icon: "ICN_Linkedin.svg", alt: "Icono Linkedin" },
       { icon: "ICN_Instagram.svg", alt: "Icono Instagram" },
     ],
+    sanitary_logos: [
+      {
+        src: "im_logo_santaria.png",
+        alt: "Web sanitaria",
+        width: "150",
+      },
+      {
+        src: "rgpd.png",
+        alt: "RGPD",
+        width: "150",
+      },
+      {
+        src: "applus-iso.png",
+        alt: "App plus",
+        width: "65",
+      },
+
+      {
+        src: "iso.png",
+        alt: "iso",
+        width: "114",
+      },
+      {
+        src: "logo-receta.png",
+        alt: "logo-receta",
+        width: "74",
+      },
+    ],
+    copyright: `Copyright © 2022 Open Healthcare. Todos los derechos
+              reservados.`,
   }),
 };
 </script>
@@ -103,16 +127,18 @@ section.open-salud-footer .v-card {
   color: #eee;
   display: block;
   transition-duration: 0.5s;
+  box-shadow: none;
 }
 .footer-dark {
   display: block;
   padding: 60px 20px;
   background-color: #1e1e1e !important;
+  box-shadow: none;
 }
 
 .border-line {
   height: 1px;
-  width: 16rem;
+  width: 75%;
   background-color: #fff;
   margin-left: 16px;
 }
@@ -121,8 +147,15 @@ section.open-salud-footer {
   font-family: "Space Grotesk", sans-serif;
 }
 
+.d-flex.flex-column.column-logo {
+  align-items: end;
+}
 img.g-image.logo {
   width: 15rem;
+}
+
+.flex.py-2.px-6.v-card.v-sheet.theme--dark {
+  box-shadow: none;
 }
 
 .open-salud-footer
@@ -138,7 +171,7 @@ img.g-image.logo {
 }
 .container-imgs {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   padding-left: 0px;
   flex-wrap: wrap;
 }
@@ -146,16 +179,6 @@ img.g-image.logo {
   align-self: center;
   margin-right: 3rem;
 }
-.img3 {
-  width: 65px;
-}
-.img4 {
-  width: 114px;
-}
-.img5 {
-  width: 74px;
-}
-
 @media (max-width: 1268px) {
   .container-imgs img {
     align-self: center;
@@ -172,6 +195,9 @@ img.g-image.logo {
   .container-logos-copyright .logos {
     display: flex;
     justify-content: center;
+  }
+  .d-flex.flex-column.column-logo {
+    align-items: flex-start;
   }
 }
 </style>

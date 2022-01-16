@@ -2,9 +2,7 @@
   <section class="open-salud-about">
     <v-row class="row container-assistance">
       <v-col sm="6" class="main-container-text px-16">
-        <p class="mt-8">
-          {{ subtitle }}
-        </p>
+        <p class="mt-8">{{ subtitle }}</p>
         <h3>{{ title }}</h3>
 
         <v-col sm="6" class="icons-description">
@@ -23,19 +21,19 @@
               </v-list-item>
             </v-list-item-group>
           </v-list>
+          <v-row class="mt-4 button-floating">
+            <v-btn class="px-10 py-5 ml-6" rounded>
+              {{ button_text }}
+            </v-btn>
+          </v-row>
         </v-col>
-        <v-row class="mt-4 button-floating">
-          <v-btn class="px-10 py-5 ml-6" rounded>
-            {{ button_text }}
-          </v-btn>
-          <div class="floating-label-mobile">{{ label_text }}</div>
-        </v-row>
+
         <div class="floating-container">
           <div class="floating-text mt-8"></div>
           <div class="floating-label">{{ label_text }}</div>
         </div>
       </v-col>
-      <v-col sm="6" class="col-img d-flex flex-row justify-center">
+      <v-col sm="6" class="col-img d-flex flex-row justify-center col-image">
         <g-image
           alt="Asistencia médica"
           src="~/assets/images/man-and-woman-sitting-on-sofa-with-laptop-sized.png"
@@ -91,6 +89,7 @@ section.open-salud-about {
   background-color: #e4e4e4;
   font-family: "Space Grotesk", sans-serif !important;
 }
+
 .open-salud-about p {
   color: black;
   line-height: 1.2;
@@ -103,6 +102,7 @@ section.open-salud-about {
 }
 .open-salud-about .container-assistance {
   margin: 0px;
+  min-height: 100vh;
 }
 
 .open-salud-about .v-btn {
@@ -151,31 +151,47 @@ section.open-salud-about {
 .open-salud-about .floating-text {
   color: #3238c4;
   border-right: 1px solid #3238c4;
-  padding: 0 0 2rem 0.5rem;
+  padding: 0px 0 0rem 0rem;
   cursor: pointer;
-  font-size: 0.8rem;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  text-align: right;
-  margin-top: 0 !important;
-  height: 110px;
+  height: 7.5rem;
   position: absolute;
-  left: 100%;
+  left: 90%;
 }
 
 .open-salud-about .floating-label {
   transform: rotate(-90deg);
-  display: inline-flex;
   color: #3238c4;
   font-family: "Space Grotesk", sans-serif !important;
-  right: -10%;
+  right: -2%;
   position: absolute;
-  margin-top: 4%;
+  top: 20%;
+  margin-top: 4rem;
+  font-size: 0.8rem;
 }
-.open-salud-about .floating-label-mobile {
-  display: none;
-}
+
 @media (max-width: 1263px) {
+  .open-salud-about .floating-text {
+    color: #3238c4;
+    border-right: 1px solid #3238c4;
+    padding: 0px 0 0rem 0rem;
+    cursor: pointer;
+    height: 7.5rem;
+    position: absolute;
+    left: 90%;
+    bottom: 0;
+  }
+
+  .open-salud-about .floating-label {
+    transform: rotate(-90deg);
+    color: #3238c4;
+    font-family: "Space Grotesk", sans-serif !important;
+    right: 0;
+    position: absolute;
+    top: 0;
+    margin-top: -11%;
+    font-size: 0.8rem;
+    /* bottom: 12rem; */
+  }
   .open-salud-about .container-assistance {
     display: block !important;
   }
@@ -183,13 +199,7 @@ section.open-salud-about {
   .open-salud-about .col-img {
     max-width: 100%;
   }
-  .open-salud-about .floating-text,
-  .open-salud-about .floating-label {
-    display: none;
-  }
-  .open-salud-about .floating-label-mobile {
-    display: block;
-  }
+
   .open-salud-about .button-floating {
     margin-bottom: 1rem;
     color: #3238c4;
@@ -199,6 +209,31 @@ section.open-salud-about {
   }
 }
 @media (max-width: 600px) {
+  .open-salud-about .floating-text {
+    color: #3238c4;
+    border-right: 1px solid #3238c4;
+    padding: 0px 0 0rem 0rem;
+    cursor: pointer;
+    height: 7.5rem;
+    position: absolute;
+    left: 90%;
+    bottom: 0;
+  }
+
+  .open-salud-about .floating-label {
+    transform: rotate(-90deg);
+    color: #3238c4;
+    font-family: "Space Grotesk", sans-serif !important;
+    right: 0;
+    position: absolute;
+    top: 0;
+    margin-top: -11%;
+    font-size: 0.8rem;
+    /* bottom: 12rem; */
+  }
+  .open-salud-about .col {
+    min-height: 40vh;
+  }
   .main-container-text {
     padding: 1rem !important;
   }
@@ -207,19 +242,13 @@ section.open-salud-about {
     margin-left: 0;
     margin-top: 2rem !important;
   }
-  .open-salud-about.main-container-text {
+  .open-salud-about .main-container-text {
     padding: 1rem 1rem !important;
   }
-  .open-salud-about.v-list-item.v-list-item--link.theme--light {
+  .open-salud-about .v-list-item.v-list-item--link.theme--light {
     width: 100%;
   }
   .open-salud-about.floating-text,
-  .open-salud-about.floating-label {
-    display: none;
-  }
-  .open-salud-about.floating-label-mobile {
-    display: block;
-  }
   .open-salud-about.button-floating {
     margin-bottom: 1rem;
     color: #3238c4;

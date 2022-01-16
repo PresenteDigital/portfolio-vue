@@ -1,5 +1,5 @@
 <template>
-  <section class="pt-8 px-8 open-salud-prices">
+  <section class="pt-8 px-8 open-salud-prices" style="min-height:100vh">
     <h3>
       {{ title }}
     </h3>

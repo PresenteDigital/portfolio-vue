@@ -92,6 +92,10 @@ section.open-salud-professionals {
   background-color: #e4e4e4;
     font-family: "Space Grotesk", sans-serif;
 }
+ .container.grid-list-md.py-1 {
+
+}
+
 .open-salud-professionals h2.title {
   text-align: left;
 color: #3238c4 !important;

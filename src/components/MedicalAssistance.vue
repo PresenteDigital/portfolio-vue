@@ -7,13 +7,13 @@
           src="~/assets/images/medical-assistance-image.PNG"
         />
       </v-col>
-      <v-col sm="6" class="px-16 main-container-text">
+      <v-col sm="6" class="main-container-text">
         <h3 class="title">{{ title }}</h3>
         <p class="mt-8">
           {{ subtitle }}
         </p>
         <p class="mt-8">{{ subtitle2 }}</p>
-        <v-col sm="6" class="icons-description">
+        <div class="icons-description">
           <v-list class="mt-8 icons-listed">
             <v-list-item-group>
               <v-list-item
@@ -29,7 +29,7 @@
               </v-list-item>
             </v-list-item-group>
           </v-list>
-        </v-col>
+        </div>
       </v-col>
     </v-row>
   </section>
@@ -82,8 +82,13 @@ section {
   background-color: #fbfafa;
   font-family: "Space Grotesk", sans-serif;
 }
+
+.main-container-text {
+  padding: 30px 60px;
+}
 .container-assistance {
   margin: 0px;
+  min-height: 100vh;
 }
 .row {
   background-color: #1d1d1f;
@@ -111,7 +116,7 @@ section p {
   color: #828282 !important;
   line-height: 1.2;
   font-weight: 400;
-  font-size: 1.5rem !important;
+  font-size: 1.2rem !important;
 }
 
 .g-image {
@@ -126,9 +131,8 @@ section p {
   background-color: transparent;
 }
 .v-list-item__title {
-  color: #e1e1e1 !important;
-  white-space: normal;
-  text-align: initial;
+  color: #e1e1e1;
+  font-size: 1.4rem;
 }
 
 .v-list-item.v-list-item--link.theme--light {
@@ -145,11 +149,6 @@ section p {
   section h3 {
     width: 100%;
   }
-  .icons-description {
-    display: flex;
-    justify-content: initial;
-    max-width: 100%;
-  }
 }
 @media (max-width: 600px) {
   section h3 {
@@ -157,10 +156,7 @@ section p {
     margin-left: 0;
     margin-top: 2rem !important;
   }
-  .main-container-text {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-  }
+
   .subtitle {
     width: 100%;
     margin-left: 0;
@@ -169,11 +165,7 @@ section p {
   .section-icons {
     margin-top: 35rem;
   }
-  .icons-description {
-    margin-left: 0;
-    display: flex;
-    justify-content: center;
-  }
+
   .v-application .title {
     font-size: 2rem !important;
     line-height: 2rem;
@@ -183,6 +175,14 @@ section p {
   }
   .col-img {
     display: none !important;
+  }
+
+  .main-container-text {
+    padding: 1px 1px;
+  }
+
+  .open-salud-medical-assistance .col {
+    min-height: 40vh;
   }
 }
 </style>
