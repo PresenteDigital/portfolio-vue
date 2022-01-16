@@ -16,18 +16,16 @@
                   <v-icon large v-text="icon"></v-icon>
                 </v-list-item-icon>
                 <v-list-item-content>
-                  <v-list-item-title v-text="text"></v-list-item-title>
+                  <v-list-item-title
+                    :aria-labelledby="text"
+                    v-text="text"
+                  ></v-list-item-title>
                 </v-list-item-content>
               </v-list-item>
             </v-list-item-group>
           </v-list>
           <v-row class="mt-4 button-floating">
-            <v-btn
-              class="px-10 py-5 ml-4"
-              rounded
-              outlined
-              aria-label="contratar"
-            >
+            <v-btn class="px-10 py-5 ml-4" rounded outlined>
               {{ button_text }}
             </v-btn>
           </v-row>

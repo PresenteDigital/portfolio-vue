@@ -62,6 +62,7 @@
                 <v-list-item
                   v-for="({ icon, text }, index) in services"
                   :key="index"
+                  :aria-labelledby="text"
                 >
                   <v-list-item-icon class="icon-img">
                     <v-icon large>{{ icon }}</v-icon>
