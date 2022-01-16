@@ -67,7 +67,9 @@
                     <v-icon large>{{ icon }}</v-icon>
                   </v-list-item-icon>
                   <v-list-item-content class="icon-text">
-                    <v-list-item-title>{{ text }}</v-list-item-title>
+                    <v-list-item-title :aria-labelledby="text">{{
+                      text
+                    }}</v-list-item-title>
                   </v-list-item-content>
                 </v-list-item>
               </v-list-item-group>

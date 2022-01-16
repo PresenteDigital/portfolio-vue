@@ -24,7 +24,10 @@
                   <v-icon large v-text="icon"></v-icon>
                 </v-list-item-icon>
                 <v-list-item-content>
-                  <v-list-item-title v-text="text"></v-list-item-title>
+                  <v-list-item-title
+                    :aria-labelledby="text"
+                    v-text="text"
+                  ></v-list-item-title>
                 </v-list-item-content>
               </v-list-item>
             </v-list-item-group>
