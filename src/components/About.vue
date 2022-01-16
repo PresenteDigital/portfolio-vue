@@ -22,7 +22,7 @@
             </v-list-item-group>
           </v-list>
           <v-row class="mt-4 button-floating">
-            <v-btn class="px-10 py-5 ml-6" rounded>
+            <v-btn class="px-10 py-5 ml-4" rounded>
               {{ button_text }}
             </v-btn>
           </v-row>
@@ -88,6 +88,10 @@ export default {
 section.open-salud-about {
   background-color: #e4e4e4;
   font-family: "Space Grotesk", sans-serif !important;
+}
+
+.icons-description {
+  padding-left: 0;
 }
 
 .open-salud-about p {
@@ -246,7 +250,7 @@ section.open-salud-about {
     padding: 1rem 1rem !important;
   }
   .open-salud-about .v-list-item.v-list-item--link.theme--light {
-    width: 100%;
+    width: 80%;
   }
   .open-salud-about.floating-text,
   .open-salud-about.button-floating {
