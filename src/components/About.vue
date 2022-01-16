@@ -1,11 +1,11 @@
 <template>
   <section class="open-salud-about">
     <v-row class="row container-assistance">
-      <v-col sm="6" class="main-container-text px-16">
+      <v-col sm="6" class="main-container-text px-lg-16">
         <p class="mt-8">{{ subtitle }}</p>
         <h3>{{ title }}</h3>
 
-        <v-col sm="6" class="icons-description">
+        <v-col sm="6" class="pl-0">
           <v-list class="mt-8 icons-listed">
             <v-list-item-group>
               <v-list-item
@@ -22,7 +22,7 @@
             </v-list-item-group>
           </v-list>
           <v-row class="mt-4 button-floating">
-            <v-btn class="px-10 py-5 ml-4" rounded>
+            <v-btn class="px-10 py-5 ml-4" rounded outlined>
               {{ button_text }}
             </v-btn>
           </v-row>
@@ -87,11 +87,7 @@ export default {
 <style scoped>
 section.open-salud-about {
   background-color: #e4e4e4;
-  font-family: "Space Grotesk", sans-serif !important;
-}
-
-.icons-description {
-  padding-left: 0;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 .open-salud-about p {
@@ -99,6 +95,13 @@ section.open-salud-about {
   line-height: 1.2;
   font-weight: 400;
   font-size: 1rem;
+}
+
+.open-salud-about h3 {
+  font-size: 4rem;
+  line-height: 4.5rem;
+  margin-top: 1rem;
+  font-weight: 100;
 }
 .open-salud-about .main-container-text {
   padding-left: 100px;
@@ -110,22 +113,11 @@ section.open-salud-about {
 }
 
 .open-salud-about .v-btn {
-  color: #3238c4 !important;
-  border-color: #3238c4 !important;
-  letter-spacing: 0px;
-  font-weight: 600;
+  color: #3238c4;
+  border-color: #3238c4;
   font-size: 0.8rem;
-  font-family: "Space Grotesk", sans-serif;
-  -webkit-box-shadow: 13px 12px 39px -5px #87888a;
   box-shadow: 13px 12px 39px -5px #87888a;
   background-color: #fff;
-}
-
-.open-salud-about h3 {
-  font-size: 4rem;
-  line-height: 4.5rem;
-  margin-top: 1rem;
-  font-weight: 100;
 }
 
 .open-salud-about .col-img {
@@ -138,7 +130,7 @@ section.open-salud-about {
   width: 100vw;
 }
 
-.v-list.v-sheet.theme--light {
+.open-salud-about .v-list.v-sheet.theme--light {
   background-color: transparent;
 }
 .open-salud-about .v-list-item__title {
@@ -165,7 +157,7 @@ section.open-salud-about {
 .open-salud-about .floating-label {
   transform: rotate(-90deg);
   color: #3238c4;
-  font-family: "Space Grotesk", sans-serif !important;
+  font-family: "Space Grotesk", sans-serif;
   right: -2%;
   position: absolute;
   top: 20%;
@@ -175,29 +167,15 @@ section.open-salud-about {
 
 @media (max-width: 1263px) {
   .open-salud-about .floating-text {
-    color: #3238c4;
-    border-right: 1px solid #3238c4;
-    padding: 0px 0 0rem 0rem;
-    cursor: pointer;
-    height: 7.5rem;
-    position: absolute;
-    left: 90%;
     bottom: 0;
   }
 
   .open-salud-about .floating-label {
-    transform: rotate(-90deg);
-    color: #3238c4;
-    font-family: "Space Grotesk", sans-serif !important;
     right: 0;
-    position: absolute;
-    top: 0;
-    margin-top: -11%;
-    font-size: 0.8rem;
-    /* bottom: 12rem; */
+    margin-top: -9%;
   }
   .open-salud-about .container-assistance {
-    display: block !important;
+    display: block;
   }
   .open-salud-about .main-container-text,
   .open-salud-about .col-img {
@@ -214,40 +192,24 @@ section.open-salud-about {
 }
 @media (max-width: 600px) {
   .open-salud-about .floating-text {
-    color: #3238c4;
-    border-right: 1px solid #3238c4;
-    padding: 0px 0 0rem 0rem;
-    cursor: pointer;
-    height: 7.5rem;
-    position: absolute;
     left: 85%;
-    bottom: 0;
   }
 
   .open-salud-about .floating-label {
-    transform: rotate(-90deg);
-    color: #3238c4;
-    font-family: "Space Grotesk", sans-serif !important;
-    right: 0;
-    position: absolute;
-    top: 0;
     margin-top: -11%;
-    font-size: 0.8rem;
-    /* bottom: 12rem; */
   }
   .open-salud-about .col {
     min-height: 40vh;
   }
-  .main-container-text {
-    padding: 1rem !important;
+  .open-salud-about .main-container-text {
+    padding: 1rem;
   }
   section.open-salud-about h3 {
     width: 100%;
     margin-left: 0;
-    margin-top: 2rem !important;
-  }
-  .open-salud-about .main-container-text {
-    padding: 1rem 1rem !important;
+    margin-top: 2rem;
+    font-size: 2rem;
+    line-height: 2rem;
   }
   .open-salud-about .v-list-item.v-list-item--link.theme--light {
     width: 80%;
@@ -261,23 +223,8 @@ section.open-salud-about {
     align-items: baseline;
   }
 
-  .open-salud-about.subtitle {
-    width: 100%;
-    margin-left: 0;
-    padding: 0 1rem !important;
-  }
   .open-salud-about.section-icons {
     margin-top: 35rem;
-  }
-
-  .open-salud-about.v-application .title {
-    font-size: 2rem !important;
-    line-height: 2rem;
-  }
-
-  section.open-salud-about h3 {
-    font-size: 2rem !important;
-    line-height: 2rem;
   }
 }
 </style>

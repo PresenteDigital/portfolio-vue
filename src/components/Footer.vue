@@ -44,6 +44,7 @@
             :src="require(`!!assets-loader!@images/${src}`)"
             :alt="alt"
             :style="style"
+            class="mb-2"
           />
         </div>
         <v-row class="container-logos-copyright mt-6">
@@ -89,27 +90,27 @@ export default {
       {
         src: "im_logo_santaria.png",
         alt: "Web sanitaria",
-        width: "150",
+        style: "width: 120px",
       },
       {
         src: "rgpd.png",
         alt: "RGPD",
-        width: "150",
+        style: "width: 120px",
       },
       {
         src: "applus-iso.png",
         alt: "App plus",
-        style: "width: 65px",
+        style: "width: 55px",
       },
       {
         src: "iso.png",
         alt: "iso",
-        style: "width: 114px",
+        style: "width: 100px",
       },
       {
         src: "logo-receta.png",
         alt: "logo-receta",
-        style: "width: 74px",
+        style: "width: 65px",
       },
     ],
     copyright: `Copyright © 2022 Open Healthcare. Todos los derechos
@@ -128,14 +129,14 @@ section.open-salud-footer .v-card {
   transition-duration: 0.5s;
   box-shadow: none;
 }
-.footer-dark {
+.open-salud-footer .footer-dark {
   display: block;
   padding: 60px 20px;
-  background-color: #1e1e1e !important;
+  background-color: #1e1e1e;
   box-shadow: none;
 }
 
-.border-line {
+.open-salud-footer .border-line {
   height: 1px;
   width: 75%;
   background-color: #fff;
@@ -146,56 +147,45 @@ section.open-salud-footer {
   font-family: "Space Grotesk", sans-serif;
 }
 
-.d-flex.flex-column.column-logo {
+.open-salud-footer .d-flex.flex-column.column-logo {
   align-items: end;
 }
-img.g-image.logo {
+.open-salud-footer img.g-image.logo {
   width: 15rem;
 }
 
-.flex.py-2.px-6.v-card.v-sheet.theme--dark {
+.open-salud-footer .flex.py-2.px-6.v-card.v-sheet.theme--dark {
   box-shadow: none;
 }
 
-.open-salud-footer
-  button.mx-4.v-btn.v-btn--icon.v-btn--round.theme--dark.v-size--default {
-  margin-left: 0 !important;
-}
-
-.copyright {
+.open-salud-footer .copyright {
   text-align: right;
   text-transform: uppercase;
   background-color: #1d1d1e;
   color: #eee;
 }
-.container-imgs {
+.open-salud-footer .container-imgs {
   display: flex;
   justify-content: flex-start;
   padding-left: 0px;
   flex-wrap: wrap;
 }
-.container-imgs img {
+.open-salud-footer .container-imgs img {
   align-self: center;
-  margin-right: 3rem;
-}
-@media (max-width: 1268px) {
-  .container-imgs img {
-    align-self: center;
-    margin-right: 1rem;
-  }
+  margin-right: 1.5rem;
 }
 @media (max-width: 600px) {
-  .copyright {
+  .open-salud-footer .copyright {
     text-align: left;
   }
-  .container-logos-copyright {
+  .open-salud-footer .container-logos-copyright {
     display: block;
   }
-  .container-logos-copyright .logos {
+  .open-salud-footer .container-logos-copyright .logos {
     display: flex;
     justify-content: center;
   }
-  .d-flex.flex-column.column-logo {
+  .open-salud-footer .d-flex.flex-column.column-logo {
     align-items: flex-start;
   }
 }

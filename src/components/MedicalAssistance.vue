@@ -1,5 +1,5 @@
 <template>
-  <section id="medical-assistance" class="open-salud-medical-assistance">
+  <section class="open-salud-medical-assistance">
     <v-row class="row container-assistance">
       <v-col sm="6" class="col-img d-flex flex-row justify-center">
         <g-image
@@ -8,13 +8,13 @@
         />
       </v-col>
       <v-col sm="6" class="main-container-text">
-        <h3 class="title">{{ title }}</h3>
-        <p class="mt-8">
+        <h3>{{ title }}</h3>
+        <p class="mt-8 mb-4">
           {{ subtitle }}
         </p>
-        <p class="mt-8">{{ subtitle2 }}</p>
-        <div class="icons-description">
-          <v-list class="mt-8 icons-listed">
+        <p class="mt-8 mb-4">{{ subtitle2 }}</p>
+        <div>
+          <v-list class="mt-md-8">
             <v-list-item-group>
               <v-list-item
                 v-for="({ icon, text }, index) in items"
@@ -78,114 +78,85 @@ export default {
 </script>
 
 <style scoped>
-section {
-  background-color: #fbfafa;
+section.open-salud-medical-assistance {
   font-family: "Space Grotesk", sans-serif;
 }
+.open-salud-medical-assistance h3 {
+  font-size: 4rem;
+  line-height: 5rem;
+  margin-top: 5rem;
+  font-weight: 400;
+  color: #e1e1e1;
+  width: 35%;
+}
 
-.main-container-text {
+.open-salud-medical-assistance p {
+  color: #828282;
+  line-height: 1.2;
+  font-size: 1.2rem;
+}
+.open-salud-medical-assistance .main-container-text {
   padding: 30px 70px;
 }
-.container-assistance {
+.open-salud-medical-assistance .container-assistance {
   margin: 0px;
   min-height: 100vh;
-}
-.row {
   background-color: #1d1d1f;
 }
-.col-img {
+
+.open-salud-medical-assistance .col-img {
   background-color: #fbfafa;
   padding: 0px;
   margin-left: 0;
 }
 
-.v-application .title {
-  font-size: 4rem !important;
-  line-height: 5rem;
-  margin-top: 5rem;
-  font-weight: 400 !important;
-  font-family: "Space Grotesk", sans-serif !important;
-}
-section h3 {
-  color: #e1e1e1 !important;
-  font-size: 5rem !important;
-  width: 35%;
-  text-align: initial;
-}
-section p {
-  color: #828282 !important;
-  line-height: 1.2;
-  font-weight: 400;
-  font-size: 1.2rem !important;
-}
-
-.g-image {
-  width: 100vw;
-}
-
-.theme--light.v-icon {
+.open-salud-medical-assistance .theme--light.v-icon {
   color: #ffffff;
 }
 
-.v-list.v-sheet.theme--light {
+.open-salud-medical-assistance .v-list.v-sheet.theme--light {
   background-color: transparent;
 }
-.v-list-item__title {
+.open-salud-medical-assistance .v-list-item__title {
   color: #e1e1e1;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
-.v-list-item.v-list-item--link.theme--light {
+.open-salud-medical-assistance .v-list-item.v-list-item--link.theme--light {
   padding: 0;
 }
 @media (max-width: 1263px) {
-  .container-assistance {
-    display: block !important;
+  .open-salud-medical-assistance .container-assistance {
+    display: block;
   }
-  .main-container-text,
-  .col-img {
+  .open-salud-medical-assistance .main-container-text,
+  .open-salud-medical-assistance .col-img {
     max-width: 100%;
   }
-  section h3 {
+  .open-salud-medical-assistance h3 {
     width: 100%;
   }
   .open-salud-medical-assistance .main-container-text {
     min-height: 50px;
   }
-  .col-img {
+  .open-salud-medical-assistance .col-img {
     height: 50vh;
   }
 }
 @media (max-width: 600px) {
-  section h3 {
-    width: 100%;
-    margin-left: 0;
-    margin-top: 2rem !important;
-  }
-
-  .subtitle {
-    width: 100%;
-    margin-left: 0;
-    padding: 0 1rem !important;
-  }
-  .section-icons {
-    margin-top: 35rem;
-  }
-
-  .v-application .title {
-    font-size: 2rem !important;
+  .open-salud-medical-assistance h3 {
+    font-size: 2rem;
     line-height: 2rem;
-  }
-  .icons-listed {
-    margin-top: 0px !important;
+    width: 100%;
+    margin-top: 2rem;
   }
 
-  .main-container-text {
+  .open-salud-medical-assistance .main-container-text {
     padding: 20px 40px;
   }
 
   .open-salud-medical-assistance .main-container-text,
-  .col-img {
+  .open-salud-medical-assistance .col-img {
     min-height: 50vh;
   }
 }

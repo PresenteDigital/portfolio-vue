@@ -1,5 +1,5 @@
 <template>
-  <section class="pt-8 px-8 open-salud-prices" style="min-height:100vh">
+  <section class="pt-8 px-8 open-salud-prices">
     <h3>
       {{ title }}
     </h3>
@@ -8,7 +8,7 @@
         {{ subtitle }}
       </p>
     </v-flex>
-    <v-flex xs12 sm12 md12>
+    <v-flex xs12 class="mt-2">
       <p class="main-text">
         {{ content }}
       </p>
@@ -197,123 +197,109 @@ export default {
 };
 </script>
 <style scoped>
-section {
-  background-color: #e4e4e4 !important;
-}
 section.open-salud-prices {
   min-height: 100vh;
-  background-color: #fbfafa;
+  background-color: #e4e4e4;
   font-family: "Space Grotesk", sans-serif;
   text-align: center;
 }
 
 .open-salud-prices h3 {
+  font-size: 4rem;
+  line-height: 4.5rem;
+  margin-top: 1rem;
+  font-weight: 100;
   line-height: 1.2;
-  font-size: 3.5rem;
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: 400;
-  color: rgb(29, 29, 30);
-  letter-spacing: 0.2px;
   width: 50%;
   margin: auto;
   text-align: initial;
   margin-bottom: 2rem;
-  margin-top: 2rem;
 }
 
-.open-salud-prices p-subtitle {
-  color: #2f35c3;
-  font-size: 2rem;
-  font-weight: 500;
-  margin-top: 1rem;
-}
-.section-title {
+.open-salud-prices .section-title {
   padding-top: 3rem;
   display: flex;
   justify-content: center;
   font-size: 2rem;
 }
-.section-title h2 {
+.open-salud-prices .section-title h2 {
   width: 70rem;
   text-align: center;
 }
-.subtitle {
+.open-salud-prices .subtitle {
   color: #2f35c3;
-  text-align: center;
   font-size: 2rem;
   font-weight: 500;
-  margin-top: 2rem;
   width: 50%;
   margin: auto;
   text-align: initial;
+  line-height: 1.2;
 }
-.main-text {
+.open-salud-prices .main-text {
   text-align: center;
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin-top: 2rem;
+  font-size: 1.4rem;
   width: 50%;
   margin: auto;
   text-align: initial;
 }
 
-.prices-main-container {
+.open-salud-prices .prices-main-container {
   max-width: 1400px;
 }
-.card-container {
-  box-shadow: none !important;
-  background: transparent !important;
+.open-salud-prices .card-container {
+  box-shadow: none;
+  background: transparent;
 }
-.prices-container {
+.open-salud-prices .prices-container {
   display: flex;
   justify-content: center;
 }
 
-.container-main-text {
+.open-salud-prices .container-main-text {
   width: 20rem;
   background-color: #e4e4e4;
   border-radius: 1rem;
   -webkit-box-shadow: 3px 10px 15px 15px #bebebe;
   box-shadow: 3px 10px 15px 15px #bebebe;
 }
-.time {
+.open-salud-prices .time {
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
   font-size: 1.5rem;
 }
-.main-price {
+.open-salud-prices .main-price {
   text-align: center;
   margin-bottom: 2rem;
   font-size: 3.8rem;
 }
-.modality {
+.open-salud-prices .modality {
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
-.btn-container {
+.open-salud-prices .btn-container {
   width: 80%;
   border-top: 1px solid #a2a2a2;
 }
-.text-button {
+.open-salud-prices .text-button {
   margin-top: 1.5rem;
 }
-.conditions {
+.open-salud-prices .conditions {
   padding: 0 1rem;
   text-align: center;
   margin-top: 1rem;
   color: #0c0c0c;
   margin-bottom: 1rem;
 }
-.list-icons-prices {
-  background-color: #e4e4e4 !important;
+.open-salud-prices .list-icons-prices {
+  background-color: #e4e4e4;
   width: 85%;
   margin-left: 2.5rem;
   text-align: initial;
 }
 @media (max-width: 1268px) {
-  .list-icons-prices {
+  .open-salud-prices .list-icons-prices {
     display: flex;
     justify-content: initial;
   }
@@ -321,15 +307,15 @@ section.open-salud-prices {
     width: 100%;
     padding: 0 1rem;
   }
-  .subtitle {
+  .open-salud-prices .subtitle {
     width: 100%;
     padding: 0 1rem;
   }
-  .main-text {
-    width: 100% !important;
+  .open-salud-prices .main-text {
+    width: 100%;
     padding: 0 1rem;
   }
-  .list-icons-prices {
+  .open-salud-prices .list-icons-prices {
     display: flex;
     justify-content: center;
   }
@@ -344,24 +330,21 @@ section.open-salud-prices {
     width: 100%;
     padding: 0.2rem;
   }
-  .subtitle {
+  .open-salud-prices .subtitle {
     width: 100%;
     padding: 0.2rem;
   }
-  .main-text {
-    width: 100% !important;
+  .open-salud-prices .main-text {
+    width: 100%;
     padding: 0.2rem;
   }
-  .list-icons-prices {
+  .open-salud-prices .list-icons-prices {
     width: 100%;
     display: flex;
     justify-content: center;
     margin-left: 0;
   }
-  .icon-img {
-    margin-right: 16px !important;
-  }
-  .icon-text div {
+  .open-salud-prices .icon-text div {
     white-space: unset;
   }
 }

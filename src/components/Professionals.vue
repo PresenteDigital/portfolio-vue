@@ -11,7 +11,7 @@
               </div> 
             </div>
             <v-card-title class="mt-4 d-flex justify-center"
-              ><h2 class="title">{{title.text}}</h2></v-card-title
+              ><h2>{{title.text}}</h2></v-card-title
             >
 
             <v-card-text class="mt-2 d-flex justify-center subtitle-text"
@@ -85,32 +85,25 @@ export default {
 };
 </script>
 </script>
-<style scope>
 
-
+<style scoped>
 section.open-salud-professionals {
   background-color: #e4e4e4;
-    font-family: "Space Grotesk", sans-serif;
-}
- .container.grid-list-md.py-1 {
-
+  font-family: "Space Grotesk", sans-serif;
 }
 
-.open-salud-professionals h2.title {
-  text-align: left;
-color: #3238c4 !important;
-font-family: "Space Grotesk", sans-serif !important;
+.open-salud-professionals h2 {
+text-align: left;
+    color: #3238c4;
+    font-size: 1.25rem;
+    font-weight: 500;
 }
 .open-salud-professionals h3 {
-      text-align: center;
-  line-height: 1.2;
-  font-size: 2rem;
-  font-weight: 400;
-  color: rgb(29, 29, 30);
-  letter-spacing: 0.2px;
+    text-align: center;
+    line-height: 1.2;
+    font-size: 2rem;
     padding-top: 3rem;
-  display: flex;
-  justify-content: center;
+    font-weight: 100;
 }
 
 .open-salud-professionals .icons-main-container {
@@ -119,8 +112,8 @@ font-family: "Space Grotesk", sans-serif !important;
     display: flex;
 }
 .open-salud-professionals .card-container {
-  box-shadow: none !important;
-  background: transparent !important;
+  box-shadow: none;
+  background: transparent;
 }
 .open-salud-professionals .icons-container {
   display: flex;
@@ -141,9 +134,4 @@ font-family: "Space Grotesk", sans-serif !important;
   -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
   filter: drop-shadow(12px 9px 4px rgba(0, 0, 0, 0.1));
 }
-.open-salud-professionals {
-  margin-top: 1px !important;
-  }
-
-
 </style>
