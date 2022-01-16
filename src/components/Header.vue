@@ -50,7 +50,12 @@
       </v-item-group>
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" absolute temporary>
+    <v-navigation-drawer
+      class="toggle-menu"
+      v-model="drawer"
+      absolute
+      temporary
+    >
       <v-list nav dense>
         <v-list-item-group>
           <v-list-item v-for="(item, index) in nav_buttons" :key="item.title">
@@ -141,5 +146,12 @@ export default {
   letter-spacing: 0px;
   font-weight: 600;
   font-size: 0.8rem;
+}
+.toggle-menu {
+  transform: translateX(-100%);
+  position: fixed;
+  top: 3.5rem !important;
+  left: 0px;
+  height: 100%;
 }
 </style>
