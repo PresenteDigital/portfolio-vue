@@ -39,10 +39,10 @@
 
       <!-- Login buttons in RWD -->
       <v-item-group class="log-buttons-rwd hidden-lg-and-up">
-        <v-btn icon small class="mx-1">
+        <v-btn icon small class="mx-1" aria-label="login">
           <v-icon>mdi-login</v-icon>
         </v-btn>
-        <v-btn icon small class="mx-1">
+        <v-btn icon small class="mx-1" aria-label="account">
           <v-icon>
             mdi-account-plus
           </v-icon>
