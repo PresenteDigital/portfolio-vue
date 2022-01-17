@@ -2,7 +2,7 @@
   <section class="open-salud-about">
     <v-row class="row container-assistance">
       <v-col sm="6" class="main-container-text px-lg-16">
-        <p class="mt-8">{{ subtitle }}</p>
+        <p>{{ subtitle }}</p>
         <h3>{{ title }}</h3>
 
         <v-col sm="6" class="pl-0">
@@ -131,7 +131,7 @@ section.open-salud-about {
 }
 
 .open-salud-about .g-image {
-  width: 100vw;
+  width: 50vw;
 }
 
 .open-salud-about .v-list.v-sheet.theme--light {
@@ -155,7 +155,8 @@ section.open-salud-about {
   cursor: pointer;
   height: 7.5rem;
   position: absolute;
-  left: 90%;
+  top: 6.9rem;
+  left: 94%;
 }
 
 .open-salud-about .floating-label {
@@ -164,11 +165,32 @@ section.open-salud-about {
   font-family: "Space Grotesk", sans-serif;
   right: -2%;
   position: absolute;
-  top: 20%;
+  top: 9.9rem;
   margin-top: 4rem;
   font-size: 0.8rem;
 }
-
+@media (max-width: 1280px) {
+  .open-salud-about .floating-text {
+    color: #3238c4;
+    border-right: 1px solid #3238c4;
+    padding: 0px 0 0rem 0rem;
+    cursor: pointer;
+    height: 4.8rem;
+    position: absolute;
+    left: 93%;
+    top: 2rem;
+  }
+  .open-salud-about .floating-label {
+    transform: rotate(-90deg);
+    color: #3238c4;
+    font-family: "Space Grotesk", sans-serif;
+    right: -2%;
+    position: absolute;
+    top: 2rem;
+    margin-top: 4rem;
+    font-size: 0.8rem;
+  }
+}
 @media (max-width: 1263px) {
   .open-salud-about .floating-text {
     bottom: 0;
@@ -193,14 +215,28 @@ section.open-salud-about {
     justify-content: initial;
     align-items: baseline;
   }
+  .open-salud-about .g-image {
+    width: 100vw;
+  }
+  .open-salud-about .floating-text {
+    color: red;
+    border-right: 1px solid #3238c4;
+    padding: 0px 0 0rem 0rem;
+    cursor: pointer;
+    height: 4.8rem;
+    position: absolute;
+    left: 93%;
+  }
 }
 @media (max-width: 600px) {
   .open-salud-about .floating-text {
     left: 85%;
+
+    margin-top: -30% !important;
   }
 
   .open-salud-about .floating-label {
-    margin-top: -11%;
+    margin-top: -20%;
   }
   .open-salud-about .col {
     min-height: 40vh;

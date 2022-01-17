@@ -14,8 +14,9 @@
       </p>
     </v-flex>
     <v-container grid-list-md py-16 class="prices-main-container">
-      <v-row sm="4" xs="12" md="12">
+      <v-row>
         <v-col
+          md="4"
           v-for="({
             title,
             price,
@@ -264,6 +265,7 @@ section.open-salud-prices {
   border-radius: 1rem;
   -webkit-box-shadow: 3px 10px 15px 15px #bebebe;
   box-shadow: 3px 10px 15px 15px #bebebe;
+  padding-bottom: 2rem;
 }
 .open-salud-prices .time {
   text-align: center;
@@ -289,11 +291,12 @@ section.open-salud-prices {
   margin-top: 1.5rem;
 }
 .open-salud-prices .conditions {
-  padding: 0 1rem;
+  padding: 0 2rem;
   text-align: center;
   margin-top: 1rem;
   color: #0c0c0c;
   margin-bottom: 1rem;
+  margin-top: 2rem;
 }
 .open-salud-prices .list-icons-prices {
   background-color: #e4e4e4;

@@ -113,6 +113,9 @@ section.open-salud-medical-assistance {
   padding: 0px;
   margin-left: 0;
 }
+.open-salud-medical-assistance .col-img .g-image {
+  width: 50vw;
+}
 
 .open-salud-medical-assistance .theme--light.v-icon {
   color: #ffffff;
@@ -145,6 +148,9 @@ section.open-salud-medical-assistance {
   }
   .open-salud-medical-assistance .col-img {
     height: 50vh;
+  }
+  .open-salud-medical-assistance .col-img .g-image {
+    width: 100vw;
   }
 }
 @media (max-width: 600px) {
