@@ -2,40 +2,46 @@
   <section class="open-salud-about">
     <v-row class="row container-assistance">
       <v-col sm="6" class="main-container-text px-lg-16">
-        <p>{{ subtitle }}</p>
-        <h3>{{ title }}</h3>
-
-        <v-col sm="6" class="pl-0">
-          <v-list class="mt-8 icons-listed">
-            <v-list-item-group :aria-label="title">
-              <v-list-item
-                :aria-label="text"
-                v-for="({ icon, text }, index) in items"
-                :key="index"
-              >
-                <v-list-item-icon>
-                  <v-icon large v-text="icon"></v-icon>
-                </v-list-item-icon>
-                <v-list-item-content>
-                  <v-list-item-title
-                    :aria-labelledby="text"
-                    v-text="text"
-                  ></v-list-item-title>
-                </v-list-item-content>
-              </v-list-item>
-            </v-list-item-group>
-          </v-list>
-          <v-row class="mt-4 button-floating">
+        <v-row>
+          <v-col>
+            <p>{{ subtitle }}</p>
+            <h3>{{ title }}</h3>
+            <v-list class="mt-8 icons-listed">
+              <v-list-item-group :aria-label="title">
+                <v-list-item
+                  :aria-label="text"
+                  v-for="({ icon, text }, index) in items"
+                  :key="index"
+                >
+                  <v-list-item-icon>
+                    <v-icon large v-text="icon"></v-icon>
+                  </v-list-item-icon>
+                  <v-list-item-content>
+                    <v-list-item-title
+                      :aria-labelledby="text"
+                      v-text="text"
+                    ></v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
+              </v-list-item-group>
+            </v-list>
+          </v-col>
+        </v-row>
+        <v-row class="mt-4 button-floating">
+          <v-col sm="6">
             <v-btn class="px-10 py-5 ml-4" rounded outlined>
               {{ button_text }}
             </v-btn>
-          </v-row>
-        </v-col>
-
-        <div class="floating-container">
-          <div class="floating-text mt-8"></div>
-          <div class="floating-label">{{ label_text }}</div>
-        </div>
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col>
+            <div>
+              <div class="floating-line"></div>
+              <div class="floating-label">{{ label_text }}</div>
+            </div>
+          </v-col>
+        </v-row>
       </v-col>
       <v-col sm="6" class="col-img d-flex flex-row justify-center col-image">
         <g-image
@@ -110,6 +116,7 @@ section.open-salud-about {
 .open-salud-about .main-container-text {
   padding-left: 100px;
   padding-top: 40px;
+  position: relative;
 }
 .open-salud-about .container-assistance {
   margin: 0px;
@@ -145,61 +152,25 @@ section.open-salud-about {
   padding: 0;
   width: 25rem;
 }
-.open-salud-about .floating-container {
-  position: relative;
-}
-.open-salud-about .floating-text {
-  color: #3238c4;
+.open-salud-about .floating-line {
   border-right: 1px solid #3238c4;
-  padding: 0px 0 0rem 0rem;
   cursor: pointer;
-  height: 7.5rem;
+  height: 7rem;
   position: absolute;
-  top: 6.9rem;
-  left: 94%;
+  right: 3.5rem;
+  bottom: 0;
 }
 
 .open-salud-about .floating-label {
   transform: rotate(-90deg);
   color: #3238c4;
-  font-family: "Space Grotesk", sans-serif;
-  right: -2%;
+  right: 0;
   position: absolute;
-  top: 9.9rem;
-  margin-top: 4rem;
   font-size: 0.8rem;
+  bottom: 4rem;
 }
-@media (max-width: 1280px) {
-  .open-salud-about .floating-text {
-    color: #3238c4;
-    border-right: 1px solid #3238c4;
-    padding: 0px 0 0rem 0rem;
-    cursor: pointer;
-    height: 4.8rem;
-    position: absolute;
-    left: 93%;
-    top: 2rem;
-  }
-  .open-salud-about .floating-label {
-    transform: rotate(-90deg);
-    color: #3238c4;
-    font-family: "Space Grotesk", sans-serif;
-    right: -2%;
-    position: absolute;
-    top: 2rem;
-    margin-top: 4rem;
-    font-size: 0.8rem;
-  }
-}
-@media (max-width: 1263px) {
-  .open-salud-about .floating-text {
-    bottom: 0;
-  }
 
-  .open-salud-about .floating-label {
-    right: 0;
-    margin-top: -9%;
-  }
+@media (max-width: 1263px) {
   .open-salud-about .container-assistance {
     display: block;
   }
@@ -218,26 +189,8 @@ section.open-salud-about {
   .open-salud-about .g-image {
     width: 100vw;
   }
-  .open-salud-about .floating-text {
-    color: red;
-    border-right: 1px solid #3238c4;
-    padding: 0px 0 0rem 0rem;
-    cursor: pointer;
-    height: 4.8rem;
-    position: absolute;
-    left: 93%;
-  }
 }
 @media (max-width: 600px) {
-  .open-salud-about .floating-text {
-    left: 85%;
-
-    margin-top: -30% !important;
-  }
-
-  .open-salud-about .floating-label {
-    margin-top: -20%;
-  }
   .open-salud-about .col {
     min-height: 40vh;
   }
@@ -254,15 +207,6 @@ section.open-salud-about {
   .open-salud-about .v-list-item.v-list-item--link.theme--light {
     width: 80%;
   }
-  .open-salud-about.floating-text,
-  .open-salud-about.button-floating {
-    margin-bottom: 1rem;
-    color: #3238c4;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: baseline;
-  }
-
   .open-salud-about.section-icons {
     margin-top: 35rem;
   }
