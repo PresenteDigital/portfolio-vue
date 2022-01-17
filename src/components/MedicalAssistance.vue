@@ -15,17 +15,20 @@
         <p class="mt-8 mb-4">{{ subtitle2 }}</p>
         <div>
           <v-list class="mt-md-8">
-            <v-list-item-group>
+            <v-list-item-group :aria-label="title">
               <v-list-item
-                aria-label="availability"
                 v-for="({ icon, text }, index) in items"
                 :key="index"
+                :aria-labelledby="text"
               >
                 <v-list-item-icon>
                   <v-icon large v-text="icon"></v-icon>
                 </v-list-item-icon>
                 <v-list-item-content>
-                  <v-list-item-title v-text="text"></v-list-item-title>
+                  <v-list-item-title
+                    :aria-labelledby="text"
+                    v-text="text"
+                  ></v-list-item-title>
                 </v-list-item-content>
               </v-list-item>
             </v-list-item-group>

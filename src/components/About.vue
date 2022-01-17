@@ -7,8 +7,9 @@
 
         <v-col sm="6" class="pl-0">
           <v-list class="mt-8 icons-listed">
-            <v-list-item-group>
+            <v-list-item-group aria-label="title">
               <v-list-item
+                :aria-label="text"
                 v-for="({ icon, text }, index) in items"
                 :key="index"
               >
@@ -16,18 +17,16 @@
                   <v-icon large v-text="icon"></v-icon>
                 </v-list-item-icon>
                 <v-list-item-content>
-                  <v-list-item-title v-text="text"></v-list-item-title>
+                  <v-list-item-title
+                    :aria-labelledby="text"
+                    v-text="text"
+                  ></v-list-item-title>
                 </v-list-item-content>
               </v-list-item>
             </v-list-item-group>
           </v-list>
           <v-row class="mt-4 button-floating">
-            <v-btn
-              class="px-10 py-5 ml-4"
-              rounded
-              outlined
-              aria-label="contratar"
-            >
+            <v-btn class="px-10 py-5 ml-4" rounded outlined>
               {{ button_text }}
             </v-btn>
           </v-row>
