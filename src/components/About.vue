@@ -115,7 +115,6 @@ section.open-salud-about {
 }
 .open-salud-about .main-container-text {
   padding-left: 100px;
-  padding-top: 40px;
   position: relative;
 }
 .open-salud-about .container-assistance {
@@ -191,9 +190,6 @@ section.open-salud-about {
   }
 }
 @media (max-width: 600px) {
-  .open-salud-about .col {
-    min-height: 40vh;
-  }
   .open-salud-about .main-container-text {
     padding: 1rem;
   }
