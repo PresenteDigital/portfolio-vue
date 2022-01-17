@@ -19,7 +19,7 @@
               <v-list-item
                 v-for="({ icon, text }, index) in items"
                 :key="index"
-                :aria-labelledby="text"
+                :aria-labelledby="text""
               >
                 <v-list-item-icon>
                   <v-icon large v-text="icon"></v-icon>

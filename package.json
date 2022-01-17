@@ -2,6 +2,7 @@
   "name": "open-medicina",
   "version": "1.0.0",
   "private": true,
+  "author": "Alejandro Castillo - Presente Digital",
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop",

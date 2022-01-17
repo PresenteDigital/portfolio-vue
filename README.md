@@ -19,14 +19,4 @@ This is the project you get when you run `gridsome create new-project`.
 
 *Hero Background: #fbfafa
 *Boton azul outlined rounded
-<div class="text-center">
-    <v-btn
-      class="ma-2"
-      outlined
-      rounded
-      color="indigo"
-    >
-      Outlined Button
-    </v-btn>
-    </div>
 

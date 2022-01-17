@@ -7,7 +7,7 @@
 
         <v-col sm="6" class="pl-0">
           <v-list class="mt-8 icons-listed">
-            <v-list-item-group aria-label="title">
+            <v-list-item-group :aria-label="title">
               <v-list-item
                 :aria-label="text"
                 v-for="({ icon, text }, index) in items"
